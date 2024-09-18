@@ -1,0 +1,1015 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  * {
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+  }
+  
+  p {
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  
+  .space {
+    height: 3px !important;
+  }
+  
+  main {
+    min-height: 80vh;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  table {
+    margin: 10px 0px;
+  }
+  
+  .tables {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .wpp-btn {
+    position: fixed;
+    top: 75%;
+    left: 95%;
+    z-index: 999999;
+  }
+  
+  .wpp-text {
+    font-size: 18px !important;
+    vertical-align: baseline;
+  }
+  
+  .wpp-btn button {
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .wpp-img {
+    width: 50px;
+  }
+  
+  .container {
+    width: 74%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .h-container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .obs-span {
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  .obs-sesc {
+    font-size: 14px !important;
+  }
+  
+  .wpp-link {
+    text-decoration: underline !important;
+  }
+  
+  .topic {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .click-aq {
+    text-decoration: underline !important;
+    color: #00386D;
+    font-weight: 600;
+  }
+  
+  .click-aq:hover {
+    opacity: 0.6;
+  }
+  
+  .content-title {
+    margin: 2rem 0 1rem 0;
+    font-size: 16px;
+  }
+  
+  .title-plans {
+    font-size: 17px;
+  }
+  
+  .invisible {
+    height: 10rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00386D;
+    transition: color 0.5s;
+  }
+  .titulo{
+    color: #00386D;
+    margin: 2rem auto;
+    font-size: 47px;
+    font-weight: 300;
+  }
+  
+  
+  
+  body {
+    background-color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    
+  }
+  
+  h3 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+  
+  }
+  
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px 40px;
+    padding: 20px;
+    justify-items: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  
+  .close {
+    color: #fff;
+  }
+  
+  .conteudo {
+    width: 80%;
+    margin: auto;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 35px 0;
+  }
+  
+  .info-sesi {
+    margin-bottom: 14px;
+  }
+  
+  .ppr-sub {
+    margin-bottom: 20px;
+  }
+  
+  .ppr-sub p {
+    margin: 5px 0 !important;
+    font-size: 12px !important;
+  }
+  
+  .gympass-img {
+    max-width: 1000px !important;
+  
+  }
+  
+  .site {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .voltar-div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 15px 10px;
+    gap: 5px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  
+  }
+  
+  .voltar {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .conteudo > p {
+    font-size: 21px;
+  }
+  
+  .obs {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .quad {
+    width: 100%;
+    height: 110px;
+    /*background-color: #f5f5f5;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5%;
+    transition: transform 0.5s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    padding: 10px 13px;
+  
+  }
+  .quad:nth-child(n+2):nth-child(-n+5) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Grupo 6 ao 9 */
+  .quad:nth-child(n+6):nth-child(-n+9) {
+    background-color: #d7d7d7;
+  }
+  
+  /* Grupo 10 ao 18 */
+  .quad:nth-child(n+10):nth-child(-n+18) {
+    background-color: #bebebe;
+  }
+  
+  /* Grupo 19 ao 21 */
+  .quad:nth-child(n+19):nth-child(-n+21) {
+    background-color: #ababab;
+  }
+  
+  /* Grupo 22 ao 25 */
+  .quad:nth-child(n+22):nth-child(-n+25) {
+    background-color: #9d9d9d;
+  }
+  
+  
+  .quad img{
+      width: 50px;
+      height: auto;
+  }
+  
+  
+  
+  
+  .quad:hover{
+    transform: scale(1.1); 
+  }
+  
+  
+  
+  .beneficio {
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding-top: 10px;
+  }
+  
+  .descricao-beneficio {
+    display: none;
+    animation: fadeIn 1s;
+    min-height: 90vh;
+    padding-bottom: 3rem !important;
+  }
+  
+  .descricao-beneficio h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  
+  .icone {
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+  
+  .fa-envelope {
+    font-size: 11px !important;
+  }
+  
+  .info-turismo {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 5px 15px;
+    margin: 25px 0;
+  }
+  
+  .title-box {
+    margin: 10px 0px 1rem !important;
+  }
+  
+  .info-itau {
+    color: #00386D;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .info-saude {
+    margin-top: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .info-saude span {
+    font-size: 12px;
+  }
+  
+  .bene-taxas {
+    grid-column: 2 / span 3;
+  }
+  
+  footer {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: #00386D;
+    padding: 3px 0;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  p#footer {
+    margin: 25px auto;
+  }
+  
+  #footer {
+    color: #FFF !important;
+  }
+  
+  .h-main {
+    text-align: left;
+    background-color: #00386D;
+    height: 4.5rem;
+  
+  }
+  
+  .h-main img {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+  }
+  
+  .header-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    opacity: 70%;
+    height: 300px;
+    background-color: #fff;
+    background-position-y: center;
+  
+  }
+  
+  
+  .header-imagem-itau {
+    background-image: url('imagens/itau.jpg');
+  
+  }
+  .header2-imagem {
+    background-image: url('imagens/well.png');
+    
+  }
+  
+  .header3-imagem{
+    background-image: url('imagens/aviao.png');
+  
+  }
+  
+  
+  .header4-imagem{
+    background-image: url('imagens/planodesaudeheader.jpg');
+    background-position-y: center
+  
+  }
+  
+  .header5-imagem{
+    background-image: url('imagens/dentista.jpg');
+  
+  }
+  
+  .header6-imagem{
+    background-image: url('imagens/farmacia.png');
+  
+  }
+  
+  .header7-imagem{
+    background-image: url('imagens/life.jpg');
+    background-position-y: center;
+  
+  }
+  
+  .header9-imagem{
+    background-image: url('imagens/material-escolar.jpg'); 
+  }
+  
+  .header10-imagem{
+    background-image: url('imagens/maos2.JPG');  
+  }
+  
+  .header12-imagem{
+    background-image: url('imagens/cafeteria.jpg');
+    /* background-position-y: -175px;   */
+  }
+  
+  .header13-imagem{
+    background-image: url('imagens/lunch.jpg');
+  }
+  
+  .header14-imagem{
+    background-image: url('imagens/lunch2.jpg');
+  }
+  
+  .header15-imagem{
+    background-image: url('imagens/ticket.png');
+  }
+  
+  .headerkid-imagem{
+    background-image: url('imagens/gift2.jpg'); 
+  }
+  
+  
+  .headerbirthday-imagem{
+    background-image: url('imagens/brinde.jpg'); 
+  }
+  
+  .headerchristmas-imagem{
+    background-image: url('imagens/christmas.jpg');   
+  }
+  
+  .header19-imagem{
+    background-image: url('imagens/cultoheader.png'); 
+  }
+  
+  .headersalary-imagem{
+    background-image: url('imagens/money2.jpg'); 
+  }
+  
+  .headersesc-imagem{
+    background-image: url('imagens/pool.jpg'); 
+  }
+  
+  .headersesi-imagem{
+    background-image: url('imagens/sesi.jpg'); 
+  }
+  
+  .headerlxm-imagem{
+    background-image: url('imagens/lxm.png'); 
+  }
+  
+  .headercredit-imagem{
+    background-image: url('imagens/credit2.jpg'); 
+  }
+  
+  .headerbasket-imagem{
+    background-image: url('imagens/mercado.jpg'); 
+  }
+  
+  .headercorrida-imagem{
+    background-image: url('imagens/corrida2.jpg'); 
+  }
+  
+  .header20-imagem{
+    background-image: url('imagens/car.png');  
+  }
+  
+  .header21-imagem{
+    background-image: url('imagens/ppr.jpg');   
+  }
+  
+  .headerbaby-imagem{
+    background-image: url('imagens/babyy.jpg');   
+  }
+  
+  .zap{
+    width: 1.5vw;
+    max-width: 100%;
+  }
+  
+  
+  .descricao-beneficio {
+    background-color: #47B3E7; 
+    padding: 1px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .descricao-beneficio img {
+    max-width: 100px; 
+  }
+  
+  .descricao-beneficio h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333; 
+  }
+  
+  .descricao-beneficio a {
+    text-decoration: none;
+  }
+  
+  .descricao-beneficio-conteudo {
+    border: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .unity-detail, .strong-detail {
+    margin: 1rem 0;
+  }
+  
+  .link {
+    padding: 8px 24px;
+    border-radius: 20px;
+    background-color: #00386D;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+  
+  }
+  .link:hover{
+    text-decoration: none;
+    background-color: #EE7528;
+  }
+  
+  .descricao-beneficio a:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff; 
+  }
+  
+  .voltar:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .desc {
+    background-color: #47B3E7; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 3rem;
+    
+  }
+  
+  
+  .descricao-beneficio-conteudo.active {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  
+  
+  .descricao-beneficio-conteudo:not(.active) {
+    background-color: #47B3E7;
+    color: #00386D;
+    margin-top: 0px;
+    
+  }
+  
+  .fa-arrow-up {
+    color: #fff !important;
+  }
+  
+  .conteudo{
+    padding: 20px;
+  
+    
+  }
+  
+  .fa-check {
+    font-size: 12px;
+    vertical-align: middle;
+    margin-right: 3px;
+  }
+  
+  
+  .descricao-beneficio{
+    background-color: #47B3E7;
+    color: #00386D;
+    margin: 0;
+    
+  }
+  
+  .descricao-beneficio h1{
+    font-size: 25px;
+  }
+  
+  
+  .descricao-beneficio-conteudo p{
+    font-size: 14px;
+  }
+  
+  
+  .desc-bene-itau {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    margin: 10px;
+  
+  }
+  
+  .desc-bene-itau.active {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-content: start;
+    background-color: #f5f5f5;
+    flex-direction: row;
+    border-radius: 5px;
+    margin: 10px 0;
+  
+  }
+  
+  .bene-itau {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #C5D1DA;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .strong{
+    color: black;
+  }
+  
+  .card-title {
+    text-align: center !important;
+  }
+  
+  .bene-itau a{
+    padding: 4px 24px;
+    border-radius: 20px;
+    background-color: #EE7528;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Calibri", sans-serif;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.4s ;
+    
+  }
+  
+  
+  .bene-itau a:hover{
+    color: #00386D;
+    text-decoration: none;
+   
+  }
+  
+  .bene-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 35%;
+  }
+  
+  
+  .img-bene-itau {
+    max-width: 100%;
+    width: 30px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .bene-ferramentas {
+    margin: 0;
+  }
+  
+  .strong-container {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    gap: 10px;
+    margin: 20px 0;
+  
+  }               
+  
+  .toggle-btns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 7px;
+  }
+  
+  .btn-content {
+    background-color: #00386D !important;
+  }
+  
+  
+  .card {
+    display: none;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  
+  .card-shown {
+    display: block !important;
+    margin-top: 2rem;
+  }
+  
+  .card.active {
+    display: block;
+  
+  }
+  
+  .strong-farm{
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 20px;
+    background-color: #2478B6;
+    border: none;
+    color: #fff;
+    transition: background-color 0.5s;
+    font-size: 12px;
+    
+  }
+  
+  .strong-farm:active {
+    background-color: #EE7528 !important;
+  }
+  
+  .strong-farm:hover{
+    background-color: #EE7528;
+    text-decoration: none;
+  }
+  
+  .clicked {
+    background-color: #EE7528 !important;
+  }
+  
+  .site a{
+    padding: 8px 24px;
+    border-radius: 20px;
+    background-color: #00386D;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+  
+  .site a[href="#topo"]{
+    background-color: #FFD618;
+    padding: 6px 12px;    
+  }
+  
+  .site a[href="#topo"]:hover{
+    color: #47B3E7;
+  }
+  
+  
+  
+  .site a:hover{
+    color: #C5D1DA;
+    text-decoration: none;
+  }
+  
+  .app{
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: #00386D;
+    font-size: 40px;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid #00386D;
+  }
+  
+  .app-div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem 
+  }
+  
+  .app:hover{
+    color: #C5D1DA;
+    text-decoration: none;
+  }
+  .clique-aqui{
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600px;
+  }
+  
+  .clique-aqui:hover{
+    text-decoration: underline;
+  }
+  
+  
+  
+  @media (max-width: 1210px) {
+    .conteudo {
+      width: 85%;
+    }
+  
+  }
+  
+  
+  @media (max-width: 1150px) {
+    .strong-farm {
+      font-size: 11px;
+    }
+  
+    .descricao-beneficio-conteudo p {
+      font-size: 13px;
+    }
+  
+    .voltar {
+      font-size: 13px !important;
+    }
+  
+  }
+  
+  
+  @media (max-width: 1080px) {
+  
+    .toggle-btns {
+      flex-direction: column;
+      gap: 10px;
+      min-width: 50%;
+    }
+  
+    .strong-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .card {
+      margin-top: 0;
+    }
+  
+    .wpp-btn {
+      left: 91%;
+    }
+  
+  }
+  
+  @media(max-width: 815px) {
+    .titulo {
+      font-size: 40px;
+    }
+  }
+  
+  
+  @media (max-width: 740px) {
+  
+    .bene-samsung, .bene-ferr {
+      grid-column: 2 / span 2;
+    }
+  
+    .bene-correntista {
+      grid-column: 1 / span 3;
+    }
+  
+    .bene-azul {
+      grid-column: 1 / span 1;
+    }
+  
+    .bene-taxas {
+      grid-column: 1 / span 3;
+    }
+  
+    .titulo {
+      font-size: 35px;
+    }
+  
+    .header12-imagem {
+      background-position-y: center;
+    }
+  
+    .site-cardapio {
+      flex-direction: column;
+      gap: 0px;
+    }
+  
+    .wpp-img {
+      width: 43px;
+    }
+    
+    .wpp-btn {
+      left: 90%;
+    }
+  
+  }
+  
+  @media(max-width: 600px) {
+    .titulo {
+      font-size: 32px;
+    }
+  }
+  
+  
+  @media (max-width: 540px){
+    .descricao-beneficio-conteudo p {
+      font-size: 11px;
+    }
+  
+    .voltar {
+      font-size: 12px;
+    }
+  
+    .obs {
+      font-size: 11px;
+    }
+  
+    .titulo {
+      font-size: 30px;
+    }
+  
+    .unity-detail p {
+      font-size: 9px !important;
+    }
+  
+  }
+  
+  
+  @media (max-width: 530px){
+    .bene-itau {
+      grid-column: 1/ span 3;
+      gap: 10px;
+    }
+  
+    .bene-ferr {
+      gap: 12px;
+    }
+  
+  }
+  
+  @media(max-width: 400px) {
+    .wpp-btn {
+      left: 89%;
+    }
+  
+    .wpp-img {
+      width: 40px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

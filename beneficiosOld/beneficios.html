@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefícios</title>
+    <link rel="stylesheet" href="benefits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        // Função para alternar a exibição da descrição
+        function toggleContent(sectionId) {
+            var allContents = document.getElementsByClassName('descricao-beneficio')
+
+            for(var i = 0; i < allContents.length; i++) {
+                allContents[i].style.display = 'none';
+            }
+
+            var content = document.getElementById(sectionId)
+            content.style.display = 'block'
+        }
+    
+        function toggleDescBene(id) {
+            const element = document.getElementById(id);
+            const allDescBene = document.getElementsByClassName('bene-itau-desc');
+
+            for (let i = 0; i < allDescBene.length; i++) {
+                if (allDescBene[i] !== element) {
+                    allDescBene[i].classList.remove('active'); // Remova a classe "active" das outras descrições
+                }
+            }
+
+            // Adicione ou remova a classe "active" na descrição selecionada
+            if (!element.classList.contains('active')) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        }
+
+
+        function showUnityDetail(cardId, btnId) {
+            const content = document.getElementById(cardId)
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                
+            // Fecha todas as outras divs visíveis
+            const allContents = document.getElementsByClassName('unity-card');
+            for (let i = 0; i < allContents.length; i++) {
+                if (allContents[i] !== content) {
+                    allContents[i].style.display = 'none';
+                }
+            }
+            } 
+
+            // Mudar a cor do botão ativo
+            const allBtns = document.getElementsByClassName('strong-farm')
+            const clicked = document.getElementById(btnId)
+            for (let i = 0; i < allBtns.length; i++) {
+                const btn = allBtns[i]
+                btn.classList.remove('clicked')
+                
+            }
+            clicked.classList.add('clicked')
+        }
+
+        function toggleCustomContent(cardId, btnId) {
+            const content = document.getElementById(cardId)
+            const clicked = document.getElementById(btnId)
+
+            // Mudar a cor do botão ativo
+            const allBtns = document.getElementsByClassName('strong-farm')
+            for (let i = 0; i < allBtns.length; i++) {
+                const btn = allBtns[i]
+                btn.classList.remove('clicked')
+                
+            }
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                clicked.classList.add('clicked')
+                
+            // Fecha todas as outras divs visíveis
+            const allContents = document.getElementsByClassName('card');
+            for (let i = 0; i < allContents.length; i++) {
+                if (allContents[i] !== content) {
+                    allContents[i].style.display = 'none';
+                }
+            }
+            } else {
+                content.style.display = 'none';
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="wpp-btn">
+        <a href="https://wa.me/5527999744253"><img src="./icones/wpp2.svg" alt="WhatsApp" class="wpp-img"></a>
+    </div>
+    <header class="h-main" id="topo">
+      <div class="h-container">
+        <img src="imagens/logo2.png" alt="Logo da empresa">
+      </div>
+    </header>
+    <div class="h-container">
+        <h1 class="titulo">Conheça nossos benefícios</h1>
+    </div>
+    <main>
+        <div class="container">
+            <!-- <a class="quad" href="#descricao-cestaBasica" onclick="toggleContent('descricao-cestaBasica')">
+                <div class="beneficio" id="cestaBasica">
+                    <img src="./icones/basket.svg" alt="boneco">
+                    <h3>Cesta Básica (BA)</h3>
+                </div>
+            </a> -->
+            <a class="quad" href="#descricao-cultosemanal" onclick="toggleContent('descricao-cultosemanal')">
+                <div class="beneficio" id="CultoSemanal">
+                    <img src="./icones/pray.svg" alt="culto">
+                    <h3>Culto semanal</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-CafeteriaCorporativa" onclick="toggleContent('descricao-CafeteriaCorporativa')">
+                <div class="beneficio" id="CafeteriaCorporativa">
+                    <img src="./icones/xicara.png" alt="cafeteria">
+                    <h3>Cafeteria Corporativa (ES)</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-Refeitorio" onclick="toggleContent('descricao-Refeitorio')">
+                <div class="beneficio" id="Refeitorio" >
+                    <img src="./icones/refeitorio.png" alt="refeitório">
+                    <h3>Refeitório</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-ValeAlimentacao" onclick="toggleContent('descricao-ValeAlimentacao')">
+                <div class="beneficio" id="ValeAlimentacao">
+                    <img src="./icones/ticket.png" alt="vale alimentação">
+                    <h3>Vale-alimentação</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-cestadenatal" onclick="toggleContent('descricao-cestadenatal')">
+                <div class="beneficio" id="CestaDeNatal">
+                    <img src="./icones/cesta.png" alt="arvore de natal">
+                    <h3>Cesta de natal</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-fortbaby" onclick="toggleContent('descricao-fortbaby')">
+                <div class="beneficio" id="fortbaby">
+                    <img src="./icones/baby.png" alt="fortbaby">
+                    <h3>Fortbaby</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-BrindeDiaDasCriancas" onclick="toggleContent('descricao-BrindeDiaDasCriancas')">
+                <div class="beneficio" id="BrindeDiaDasCriancas">
+                    <img src="./icones/criancas.png" alt="crianças">
+                    <h3>Brinde no dia das crianças</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-brindesdeaniversario"onclick="toggleContent('descricao-brindesdeaniversario')">
+                <div class="beneficio" id="BrindesDeAniversario">
+                    <img src="./icones/presente.png" alt="presente">
+                    <h3>Brindes de aniversário</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-kitescolar" onclick="toggleContent('descricao-kitescolar')">
+                <div class="beneficio" id="KitEscolar">
+                    <img src="./icones/escolar.png" alt="material escolar">
+                    <h3>Kit Escolar</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-lxm" onclick="toggleContent('descricao-lxm')">
+                <div class="beneficio" id="lxm">
+                    <img src="./icones/aprendizagem.png" alt="lxm">
+                    <h3>Ambiente de Aprendizagem</h3>
+                </div>
+            </a> 
+
+            <a class="quad" href="#descricao-alugueldecarros" onclick="toggleContent('descricao-alugueldecarros')">
+                <div class="beneficio" id="AluguelDeCarros">
+                    <img src="./icones/carros.png" alt="carro">
+                    <h3>Aluguel de carros</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-sesc" onclick="toggleContent('descricao-sesc')">
+                <div class="beneficio" id="sesc">
+                    <img src="./icones/sesc.svg" alt="sesc">
+                    <h3>SESC</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-sesi" onclick="toggleContent('descricao-sesi')">
+                <div class="beneficio" id="sesi">
+                    <img src="./icones/sesisenai.png" alt="sesi e senai">
+                    <h3>SESI e SENAI</h3>
+                </div>
+            </a> 
+            <a class="quad" href="#descricao-gympass" onclick="toggleContent('descricao-gympass')">
+                <div class="beneficio" id="Gympass">
+                    <img src="./icones/wellhub.png" alt="academia">
+                    <h3>Wellhub</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-corrida" onclick="toggleContent('descricao-corrida')">
+                <div class="beneficio" id="corrida">
+                    <img src="./icones/corrida.png" alt="academia">
+                    <h3>Grupo de Corrida</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-itau" onclick="toggleContent('descricao-itau')">
+                <div class="beneficio" id="Itau">
+                    <img src="./icones/itau.png" alt="banco">
+                    <h3>Itaú</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-turismo" onclick="toggleContent('descricao-turismo')">
+                <div class="beneficio" id="Turismo">
+                    <img src="./icones/turismo.png" alt="avião">
+                    <h3>Turismo</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-conveniofarmacia" onclick="toggleContent('descricao-conveniofarmacia')">
+                <div class="beneficio" id="ConvenioFarmacia">
+                    <img src="./icones/farmacia.png" alt="pílula">
+                    <h3>Convênio farmácia</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-salario" onclick="toggleContent('descricao-salario')">
+                <div class="beneficio" id="salario">
+                    <img src="./icones/antecipacao.png" alt="13 salario">
+                    <h3>Antecipação do 13º salário</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-credito" onclick="toggleContent('descricao-credito')">
+                <div class="beneficio" id="credito">
+                    <img src="./icones/credito.png" alt="banco">
+                    <h3>Crédito Consignado</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-ppr" onclick="toggleContent('descricao-ppr')">
+                <div class="beneficio" id="PPR">
+                    <img src="./icones/ppr.png" alt="grafico dando lucro">
+                    <h3>PPR</h3>
+                </div>
+            </a> 
+            <a class="quad" href="#descricao-maosdadas" onclick="toggleContent('descricao-maosdadas')">
+                <div class="beneficio" id="DeMaosDadas">
+                    <img src="./icones/maosdada.png" alt="mãos dadas">
+                    <h3>De mãos dadas</h3>
+                </div>
+            </a>    
+            <a class="quad" href="#descricao-segurodevida" onclick="toggleContent('descricao-segurodevida')">
+                <div class="beneficio" id="SeguroDeVidaAssistenciaFuneral">
+                    <img src="./icones/seguro.png" alt="boneco">
+                    <h3>Seguro de Vida</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-planodesaude" onclick="toggleContent('descricao-planodesaude')">
+                <div class="beneficio" id="PlanoDeSaude">
+                    <img src="./icones/saude.png" alt="coração">
+                    <h3>Plano de saúde</h3>
+                </div>
+            </a>
+            <a class="quad" href="#descricao-odonto" onclick="toggleContent('descricao-odonto')">
+                <div class="beneficio" id="PlanoOdontologico">
+                    <img src="./icones/dentista.png" alt="dente">
+                    <h3>Plano odontológico</h3>
+                </div>
+            </a>
+
+
+        </div>
+
+    </main> 
+
+    <section class="desc">
+        <section class="descricao-beneficio" id="descricao-CafeteriaCorporativa">
+            <h1 onclick="toggleContent('descricao-CafeteriaCorporativa')">Cafeteria Corporativa</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header12-imagem"></div>
+                <div class="conteudo">
+                    <p>Um ambiente agradável, aconchegante e confortável que proporciona um encontro de pessoas que gostam de saborear um bom café no intervalo de trabalho.</p>
+                    <p>O cardápio é composto por um mix de produtos atrativos com opções de itens focados na saúde e bem-estar para pessoas que buscam escolhas equilibradas.</p>
+                    <p>Um espaço de convivência com um atendimento rápido e sob medida.</p>
+                    <p>Para conhecer o cardápio, clique <a href="https://mundoazul.fortlev.com.br/" target="_blank" class="click-aq" ><strong>aqui</strong></a>.</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-Refeitorio">
+            <h1 onclick="toggleContent('descricao-Refeitorio')">Refeitório</h1>
+                <div class="descricao-beneficio-conteudo">
+                    <div class="header-img header14-imagem"></div>
+                    <div class="conteudo">
+                        <div class="conteudo-texto">
+                            <p>A Fortlev dispõe de refeitórios próprios em todas as unidades, que funcionam para atender em todos os horários de trabalho. Os colaboradores podem se servir de uma alimentação variada e cardápio diferenciado e elaborado por nutricionistas, para cada turno, sendo até três refeições diárias, conforme o horário de trabalho.</p>
+                            <p><i class="fa fa-check"></i> Café da Manhã</p>
+                            <p><i class="fa fa-check"></i> Almoço</p>
+                            <p><i class="fa fa-check"></i> Lanche da tarde</p>
+                            <p><i class="fa fa-check"></i> Jantar</p>
+                            <p><i class="fa fa-check"></i> Ceia</p>
+                            <p>Com opções de pratos light e pratos gourmet, com reserva prévia, você poderia variar e balancear a sua alimentação. <strong>Essas opções são servidas somente com reserva prévia.</strong></p>
+                            <p>Para consultar o cardápio da semana e fazer sua reserva do prato Light ou Gourmet acesse o <a href="https://mundoazul.fortlev.com.br/" target="_blank" class="click-aq" ><strong>Mundo Azul</strong></a> na aba de cardápio</p>
+
+                            <div class="toggle-btns">
+                                <button onclick="toggleCustomContent('refeitorio', 'btn-refeitorio')" class="strong-farm" id="btn-refeitorio">Descontos</button>                        
+                            </div>
+
+                            <div>
+                                <div class="card" id="refeitorio">
+                                    <p>O colaborador tem um desconto mensal em seu pagamento referente à alimentação, conforme determina a legislação em vigor.</p>
+                                    <p class="topic">• <strong>Fortlev Bahia e Composto</strong>: R$9,90</p>
+                                    <p class="topic">• <strong>Demais unidades</strong>: R$9,00</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="voltar-div">
+                        <i class="fa fa-arrow-up"></i>
+                        <a class="voltar" href="#topo">Voltar ao topo</a>
+                    </div>  
+                </div>
+        
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-ValeAlimentacao">
+            <h1 onclick="toggleContent('descricao-ValeAlimentacao')">Vale alimentação</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header15-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Nossos colaboradores têm o benefício alimentação por meio do cartão Ticket Alimentação.</p>
+                        <div class="info-turismo">
+                            <p><strong>Valor: </strong>R$ 750,00 mensal</p>
+                        </div>
+                        <p><i class="fa fa-check"></i>No mês da admissão o valor é proporcional aos dias trabalhados;</p>
+                        <p><i class="fa fa-check"></i>Para os novos colaboradores, os cartões são entregues até o 10º dia útil do mês seguinte da admissão;</p>
+                        <p><i class="fa fa-check"></i>O benefício é creditado no último dia útil do mês.</p>
+                        <p><i class="fa fa-check"></i>Bloqueio e solicitação de 2ª via do cartão são feitos exclusivamente pelo App da Ticket. A 2ª via do cartão é entregue na empresa e o RH fará a entrega ao colaborador.</p>
+                        <div class="card card-shown" >
+                            <p>
+                                Tem direito o colaborador que não teve faltas no mês, no período de ponto fechado (20 a 21), mesmo que justificadas. As exceções são apenas para os casos de doenças infectocontagiosas validadas pelo setor de Medicina. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <span class="obs-span">Em casos de ausência previstas em convenção coletiva, será pago o valor proporcional.</span>
+                        <p class="infosadicionais"><strong>Para informações adicionais </strong><a class="click-aq" href="https://www.ticket.com.br/portal-usuario/consulta-saldo" target="_blank"> clique aqui</a></p>                        
+                    </div>
+                    
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-fortbaby">
+            <h1 onclick="toggleContent('descricao-fortbaby')">Fortbaby</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerbaby-imagem"></div>
+                <div class="conteudo"> 
+                    <div class="conteudo-texto">
+                        <p>Na Fortlev, celebramos cada momento especial da vida!</p>
+                        <p>Quando um novo membro da família está a caminho, todos os papais e mamães da nossa equipe recebem um kit superespecial para comemorar essa emocionante chegada. </p>
+                        <p>O kit é composto por uma bíblia para abençoar esse novo capítulo, uma bolsa de maternidade e um cartão presente no valor de 200,00!</p>
+                        <p>Quer saber como receber o seu? É fácil! Basta procurar o RH local e solicitar o seu kit. </p>
+                        <p>E o melhor de tudo: o cartão presente pode ser usado em qualquer estabelecimento que aceite as bandeiras Mastercard e Visa, para que você possa escolher exatamente o que deseja para esse momento especial.</p>
+                        <p>Celebre conosco cada nova vida que chega à família Fortlev!</p>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-BrindeDiaDasCriancas">
+            <h1 onclick="toggleContent('descricao-BrindeDiaDasCriancas')">Brinde no Dia das Crianças</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerkid-imagem"></div>
+                <div class="conteudo"> 
+                    <div class="conteudo-texto">
+                        <p>Na Fortlev, reconhecemos que as crianças são o brilho do mundo! Para celebrar essa alegria, preparamos um Dia das Crianças especial, repleto de sorrisos e diversão.</p>
+                        <p>Em parceria com o Instituto Água Viva, uma organização social atuante no Sertão do Nordeste, proporcionamos momentos inesquecíveis para os pequenos, através de brinquedos são cuidadosamente selecionados e produzidos no Sertão Nordestino, de acordo com a faixa etária, e serão entregues aos colaboradores que têm filhos de até 14 anos.</p>
+                        <p>O RH organiza e divulga a agenda e a logística das entregas, que costuma acontecer em data próxima ao dia das crianças, comemorado no dia 12 de outubro de cada ano. </p>
+                        <p>É hora de espalhar alegria e fazer a magia acontecer! </p>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+    
+        <section class="descricao-beneficio" id="descricao-brindesdeaniversario">
+            <h1 onclick="toggleContent('descricao-brindesdeaniversario')">Brindes de Aniversário</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerbirthday-imagem"></div>
+                <div class="conteudo"> 
+                    <p>No mês do seu aniversário, a Fortlev tem uma surpresa especial para você!</p>
+                    <p>Como forma de celebrar o seu dia especial, preparamos um brinde personalizado exclusivamente para nossos colaboradores. </p>
+                    <p>No mês do seu aniversário, procure o RH e retire o seu brinde &#128522;&#127874;</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-cestadenatal">
+            <h1 onclick="toggleContent('descricao-cestadenatal')">Cesta de Natal</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerchristmas-imagem"></div>
+                <div class="conteudo">
+                  <p>No final de cada ano, a Fortlev presenteia seus colaboradores com um generoso Kit de Natal. Selecionamos os itens com cuidado e dedicação, pois valorizamos a importância desse gesto para nossa equipe.</p>
+                  <p>A distribuição ocorre em dezembro com a data sendo divulgada em nossos canais de comunicação. Devido à necessidade de itens congelados, a entrega é programa para um único dia, garantindo a qualidade dos produtos. </p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-cultosemanal">
+            <h1 onclick="toggleContent('descricao-cultosemanal')">Culto Semanal</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header19-imagem"></div>
+                <div class="conteudo">
+                    <p>Um dos nossos valores fundamentais é a Fé em Deus. Na Fortlev, começamos cada semana com um momento especial dedicado à fé e espiritualidade!</p>
+                    <p>Todas as segundas-feiras de manhã, nos reunimos para um culto inspirador, com nossa equipe de louvor própria e a presença de um preletor convidado, num local especialmente reservado para esse momento. É uma oportunidade única para renovar nossas energias, fortalecer os laços e colocar Deus em primeiro lugar.</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-alugueldecarros">
+            <h1 onclick="toggleContent('descricao-alugueldecarros')">Aluguel de Carros</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header20-imagem"></div>
+                <div class="conteudo">
+                    <h2>Movida - <strong>Aluguel de Carros</strong></h2>
+                    <div class="conteudo-texto">
+                        <p>Para ter mais economia na locação de veículos, a Fortlev tem uma parceria de desconto exclusiva com a Movida.</p>
+                        <p>A Movida está nas principais cidades do Brasil, alugue seu carro com melhores preços e escolha o local de devolução ideal para você!</p>
+                        <p>São mais de 250 lojas próprias nas principais cidades e aeroportos do país!</p>
+                        <p>A Vida é para ser MOVIDA!</p>
+                    </div>
+                    <div class="toggle-btns toggle-saude">
+                        <button onclick="toggleCustomContent('carro1', 'btn-carro1')" class="strong-farm" id="btn-carro1">Elegibilidade</button>                        
+                        <button onclick="toggleCustomContent('carro2', 'btn-carro2')" class="strong-farm" id="btn-carro2">Valores e Reservas</button>                                  
+                    </div>
+                    <div>
+                        <div class="card" id="carro1">
+                            <p>Todos os colaboradores e estagiários maiores de 18 anos podem fazer a reserva do seu veículo com a Movida.</p>
+                        </div>
+                        <div class="card" id="carro2">
+                            <p>Para consultar os valores e fazer sua reserva acesse o site <a href="https://colaborador.movida.com.br/fortlevind" target="_blank" class="click-aq">aqui</a> e utilize o código de acesso exclusivo da Fortlev.</p>
+                            <p><strong>Use o código de acesso:</strong> c33967bb1d</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-maosdadas">
+            <h1 onclick="toggleContent('descricao-maosdadas')">De Mãos Dadas</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header10-imagem"></div>
+                <div class="linha"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Um programa de apoio e cuidado, pela qualidade de vida do colaborador e da sua família.</p>
+                        <p>O Programa De Mãos Dadas reforça o compromisso da Fortlev com o bem-estar e qualidade de vida dos seus colaboradores. Uma iniciativa que pode ajudar a atingir suas metas, sejam elas profissionais ou pessoais.</p>
+                        <p>O Programa de Apoio e Cuidado ajuda os colaboradores e seus dependentes legais a se prepararem e enfrentarem com sucesso situações diárias ou assuntos mais delicados por meio de atendimento profissional com psicólogos, advogados, consultores financeiros e assistentes sociais. O programa oferece apoio emocional integral, acompanhe os assuntos atendidos:</p>
+                    </div>
+                    <div class="toggle-btns">
+                        <button onclick="toggleCustomContent('maos1', 'btn-maos1')" class="strong-farm" id="btn-maos1">Psicológica</button>    
+                        <button onclick="toggleCustomContent('maos2', 'btn-maos2')" class="strong-farm" id="btn-maos2">Jurídica</button>  
+                        <button onclick="toggleCustomContent('maos3', 'btn-maos3')" class="strong-farm" id="btn-maos3">Financeira</button> 
+                        <button onclick="toggleCustomContent('maos4', 'btn-maos4')" class="strong-farm" id="btn-maos4">Social</button> 
+                    </div>
+                    <div class="strong-detail">
+                        <div class="card" id="maos1">
+                            <h5 class="content-title title-box"> Assistência Psicológica</h5>
+                            <p class="topic">• Situações traumáticas e momentos decisivos;</p>
+                            <p class="topic">• Promoções e adaptações;</p>
+                            <p class="topic">• Estresse, esgotamento, ansiedade e depressão;</p>
+                            <p class="topic">• Orientação sobre criança e adolescentes;</p>
+                            <p class="topic">• Dificuldades familiares;</p>
+                            <p class="topic">• Divórcio;</p>
+                            <p class="topic">• Maternidade e/ou paternidade;</p>
+                            <p class="topic">• Luto e perdas.</p>
+                        </div>
+                        <div class="card" id="maos2">
+                            <h5 class="content-title title-box"> Orientação Jurídica</h5>
+                            <p class="topic">• Orientação para a aquisição de bens;</p>
+                            <p class="topic">• Dúvidas sobre contratos;</p>
+                            <p class="topic">• Direito do consumidor;</p>
+                            <p class="topic">• Guarda de filhos e pensão alimentícia;</p>
+                            <p class="topic">• Sucessões, inventários e testamentos;</p>
+                            <p class="topic">• Calunias, difamação e injurias;</p>
+                            <p class="topic">• Imposto em geral.</p>
+                        </div>
+                        <div class="card" id="maos3">
+                            <h5 class="content-title title-box"> Consultoria Financeira</h5>
+                            <p class="topic">• Endividamento;</p>
+                            <p class="topic">• Reorganização de orçamento;</p>
+                            <p class="topic">• Planejamento para aquisição de bens;</p>
+                            <p class="topic">• Planejamento para poupança;</p>
+                            <p class="topic">• Planejamento do orçamento doméstico;</p>
+                            <p class="topic">• Renegociação de dívidas.</p>
+                        </div>
+                        <div class="card" id="maos4">
+                            <h5 class="content-title title-box"> Serviço Social</h5>
+                            <p class="topic">• Orientação familiar e situações críticas (adoção, óbitos, separação);</p>
+                            <p class="topic">• Pesquisa de recursos da comunidade (saúde, educação etc.);</p>
+                            <p class="topic">• Orientação no auxílio a pessoas doentes em hospitais ou residências;</p>
+                            <p class="topic">• Informações sobre previdência social;</p>
+                            <p class="topic">• Apoio ao acesso à justiça.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="content-title">Características do Programa</h5>
+                        <p><i class="fa fa-check"></i><strong> Confidencial: </strong>Sigilo garantido aos usuários;</p>
+                        <p><i class="fa fa-check"></i><strong> Utilização Irrestrita: </strong>O programa pode ser usado sempre que o usuário precisar, não tem limite de uso;</p>
+                        <p><i class="fa fa-check"></i><strong> Custo Zero: </strong>O programa é totalmente acessível e nenhuma coparticipação é repassada ao usuário;</p>
+                        <p><i class="fa fa-check"></i><strong> Dependentes Legais: </strong>Cônjuges e filhos de até 24 anos tem acesso ao programa.</p>
+                        <h5 class="content-title">Acesso fácil</h5>
+                        <p>Atendimento telefônico de segunda a sexta, das 8h às 20h. Disponível 24h por dia, 7 dias por semana, para situações críticas.</p>
+                        <p><strong>Telefone: </strong>Ligação gratuita pelo <strong>0800 025 4321</strong> de qualquer lugar do país. Sessão com o consultor especializado desde a primeira chamada.</p>
+                        <p><strong>Presencial: </strong>O atendimento presencial é encaminhado pelo telefone.</p>
+                        <p>Quando a situação atendida precisa de acompanhamento presencial, você ou o seu dependente pode contar com até 06 sessões de atendimento particular, com especialista da área. </p>
+                        <p>Use sempre que precisar. Se você conhecer alguém na empresa que precise de apoio, estimule-o a ligar também. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="voltar-div">
+                <i class="fa fa-arrow-up"></i>
+                <a class="voltar" href="#topo">Voltar ao topo</a>
+            </div>  
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-salario">
+            <h1 onclick="toggleContent('descricao-salario')">Antecipação do 13º salário</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headersalary-imagem"></div>
+                <div class="conteudo">
+                    <p>A antecipação do 13º salário nas férias dos colaboradores já é prevista por lei. A Fortlev flexibiliza que os colaboradores solicitem a antecipação da 1ª parcela do 13º salário a partir do mês de julho. O valor é depositado junto com o salário do mês.</p>
+                    <p>A solicitação de antecipação deve ser feita pelo Whatsapp do RH no número <strong>(27) 9 9974 4253</strong>.</p>
+                    <h5 class="content-title">Atenção!</h5>
+                    <p class="topic">• Será avaliado os meses de direito;</p>
+                    <p class="topic">• A solicitação deve acontecer até o dia 15, para que o pagamento ocorra no mês corrente;</p>
+                    <p class="topic">• Caso o colaborador já tenha recebido a antecipação do 13º nas férias, a próxima antecipação poderá ser solicitada somente no ano seguinte.</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-sesc">
+            <h1 onclick="toggleContent('descricao-sesc')">SESC</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headersesc-imagem"></div>
+                <div class="conteudo">
+                    <p>Os funcionários registrados na filial Corporativo tem acesso a projetos e serviços nas áreas de educação, saúde, cultura, lazer e assistência. Para fazer parte desse universo, basta solicitar a credencial Sesc, seu passaporte de acesso a todos os serviços da instituição.</p>
+                    <p>A credencial deve ser solicitada em uma unidade Sesc do seu estado de residência. Em alguns estados é necessário agendar o serviço.</p>
+                    <p>Para solicitar a credencial Sesc, é preciso apresentar os seguintes documentos:</p>
+                    <p><i class="fa fa-check"></i> Documento de Identidade (RG);</p>
+                    <p><i class="fa fa-check"></i> Cadastro de Pessoa Física (CPF);</p>
+                    <p><i class="fa fa-check"></i> Carteira de Trabalho;</p>
+                    <p><i class="fa fa-check"></i> Contracheque mais recente.</p>
+                    <span class="obs-span obs-sesc">Para informações mais especificas, referente ao credenciamento da sua região acesse o site <a href="https://www.sesc.com.br/credencial-sesc/" class="click-aq" target="_blank">aqui</a></span>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-sesi">
+            <h1 onclick="toggleContent('descricao-sesi')">SESI e SENAI</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headersesi-imagem"></div>
+                <div class="conteudo">
+                    <p>SESI - Serviço Social da Industria e SENAI - Serviço Nacional de Aprendizagem Industrial, tem finalidade de promover o bem-estar social, o desenvolvimento cultural e a melhoria da qualidade de vida do trabalhador que atua na indústria. Com departamentos regionais, presentes em todos os estados do Brasil, o Sesi e o Senai prestam serviços sociais de saúde, educação, lazer e cultura.</p>
+                
+                    <div class="toggle-btns">
+                        <button onclick="toggleCustomContent('sesi1', 'btn-sesi1')" class="strong-farm" id="btn-sesi1">Quem tem direito</button>    
+                        <button onclick="toggleCustomContent('sesi2', 'btn-sesi2')" class="strong-farm" id="btn-sesi2">Como fazer</button>  
+                    </div>
+                    <div class="strong-detail">
+                        <div class="card" id="sesi1">
+                            <p>Todos os colaboradores da Industria têm acesso aos convênios do Sesi e Senai.</p>
+                        </div>
+                        <div class="card" id="sesi2">
+                            <p>Para informações mais especificas, de como aproveitar de todos serviços do SESI e Senai do seu estado, confira mais informações no site.</p>
+                            <div class="info info-sesi">
+                                <a class="link" href="https://www.portaldaindustria.com.br/sesi/institucional/" target="_blank">SESI</a>
+                                <a class="link" href="https://www.portaldaindustria.com.br/senai/institucional/" target="_blank">SENAI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-lxm">
+            <h1 onclick="toggleContent('descricao-lxm')">Ambiente de Aprendizagem</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerlxm-imagem"></div>
+                <div class="conteudo">
+                    <p>Temos um programa interno de capacitação de colaboradores, dinâmico e interativo, que possibilita o aprimoramento eficiente de suas habilidades.</p> 
+                    <p>Além disso, oferecemos a Plataforma de Treinamento Fortlev, um ambiente digital com diversos conteúdos e certificados disponíveis para todos os colaboradores, independentemente do Planejamento Anual de Treinamento (PAD). Tudo isso é pensado com o objetivo de promover o desenvolvimento e o crescimento contínuo de nosso time interno.</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-gympass">
+            <h1 onclick="toggleContent('descricao-gympass')">Wellhub</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header2-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Pensando no bem-estar físico e mental dos nossos colaboradores, a Fortlev conta com a parceria com a Wellhub, a maior plataforma de bem estar no mundo.</p>
+                        <p>Por meio deste benefício, os colaboradores poderão ter acesso a mais de 50mil academias e estudios, com mais de 60 apps fitness e bem-estar e mais de 1500 personal trainers em 11 países.</p>
+                        <p><i class="fa fa-check"></i> Aulas presenciais;</p>
+                        <p><i class="fa fa-check"></i> Aulas transmitidas ao vivo;</p>
+                        <p><i class="fa fa-check"></i> Apps de bem estar;</p>
+                        <p><i class="fa fa-check"></i> Suporte individual.</p>
+                    </div>
+                    <div class="toggle-btns">
+                        <button onclick="toggleCustomContent('gympass1', 'btn-gympass1')" class="strong-farm" id="btn-gympass1">Planos e preços</button>
+                        <button onclick="toggleCustomContent('gympass2', 'btn-gympass2')" class="strong-farm" id="btn-gympass2">Cadastro de dependentes</button> 
+                    </div>
+                    <div class="strong-detail">
+                        <div class="card" id="gympass1">
+                            <p>Para fazer esse investimento, o colaborador poderá escolher o tipo de plano que cabe no seu bolso.</p>
+                            <div>
+                                <h5 class="content-title">Digital - Gratuito!</h5>
+                                <p class="topic">• 10 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Starter - R$29,90/mês</h5>
+                                <p class="topic">• +2.300 academias</p>
+                                <p class="topic">• 41 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Basic - R$55,90/mês</h5>
+                                <p class="topic">• +8.400 academias</p>
+                                <p class="topic">• 44 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Basic+ - R$85,90/mês</h5>
+                                <p class="topic">• +13.500 academias</p>
+                                <p class="topic">• 46 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Silver - R$129,90/mês</h5>
+                                <p class="topic">• +18.900 academias</p>
+                                <p class="topic">• 51 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Silver+ - R$189,90/mês</h5>
+                                <p class="topic">• +21.100 academias</p>
+                                <p class="topic">• 51 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Golden - R$269,90/mês</h5>
+                                <p class="topic">• +24.000 academias</p>
+                                <p class="topic">• 53 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Golden+ - R$399,90/mês</h5>
+                                <p class="topic">• +25.400 academias</p>
+                                <p class="topic">• 53 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Platinum - R$519,90/mês</h5>
+                                <p class="topic">• +25.800 academias</p>
+                                <p class="topic">• 52 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Diamond - R$674,90/mês</h5>
+                                <p class="topic">• +25.960 academias</p>
+                                <p class="topic">• 52 apps</p>
+                            </div>
+                            <div>
+                                <h5 class="content-title">Diamond+ - R$679,90/mês</h5>
+                                <p class="topic">• +25.970 academias</p>
+                                <p class="topic">• 52 apps</p>
+                            </div>
+                        </div>
+                        <div class="card" id="gympass2">
+                            <p>É válido apenas para cônjuge e ﬁlhos, e o limite é de 3 dependentes por titular. Também é necessário ter um plano ativo antes de seguir com a adição do familiar.</p>
+                            <p>Após a inclusão do dependente na conta, todo o gerenciamento do plano é feito pelo titular, exceto o check-in, que deve ser realizado na própria conta do beneﬁciado, baixando o app Wellhub. Se for preciso fazer o cancelamento, trocas e pausas de plano, é o titular quem deve cuidar disso.  Em alguns casos, o titular também pode enviar um convite para a pessoa que quer adicionar, dessa maneira ela ativará e gerenciará o próprio plano.</p>
+                            <p>O método de pagamento disponível para o colaborador é desconto em folha e cartão de crédito. Para o dependente, apenas o cartão de crédito está disponível.</p>
+                            <p>Para que o dependente seja adicionado, é necessário que o titular possua um plano ativo (que não precisa ser igual ao plano do dependente).</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h5 class="content-title">Atenção!</h5>
+                        <p>O benefício ficará ativo no mês posterior a admissão.</p>
+                    </div>
+                    <div>
+                        <h5 class="content-title">Clique em uma das opções abaixo para baixar o aplicativo:</h5>
+                        <div class="app-div">
+                            <a class="app" href="https://apps.apple.com/br/app/wellhub-gympass/id703761434" target="_blank"><i class="fa fa-apple"></i></a>
+                            <a class="app" href="https://play.google.com/store/apps/details?id=com.gympass&hl=pt_BR&gl=US" target="_blank"><i class="fa fa-android"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-corrida">
+            <h1>Grupo de Corrida</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headercorrida-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Aqui na Fortlev os colaboradores têm acesso a uma Assessoria Esportiva com a O2fit!</p>                        
+                        <p>Com o suporte especializado da O2Fit, com uma equipe de professores altamente qualificados para esclarecer todas as dúvidas e guiar para uma jornada de superação.</p>
+                        <h5 class="content-title">Principais benefícios de participar do Grupo:</h5>
+                        <p class="topic"><i class="fa fa-check"></i>Redução do estresse</p>                        
+                        <p class="topic"><i class="fa fa-check"></i>Melhoria da qualidade do sono</p>                        
+                        <p class="topic"><i class="fa fa-check"></i>Estímulo à saúde mental</p>                        
+                        <p class="topic"><i class="fa fa-check"></i>Socialização</p>                        
+                        <p class="topic"><i class="fa fa-check"></i>Aumento da concentração</p>                        
+                        <p class="topic"><i class="fa fa-check"></i>Integração</p>
+                        <p><strong>Esse benefício não tem nenhum custo para o funcionário!</strong></p>
+                        <p>Faça parte desse grupo que é determinado a chegar longe!</p>                        
+                    </div>
+                    <div class="toggle-btns">
+                        <button onclick="toggleCustomContent('corrida1', 'btn-corrida1')" class="strong-farm" id="btn-corrida1">Informações para cadastro</button>
+                        <button onclick="toggleCustomContent('corrida2', 'btn-corrida2')" class="strong-farm" id="btn-corrida2">Programa de Treinamento</button>
+                        <button onclick="toggleCustomContent('corrida3', 'btn-corrida3')" class="strong-farm" id="btn-corrida3">Treinadores e Professores</button>
+                        <button onclick="toggleCustomContent('corrida4', 'btn-corrida4')" class="strong-farm" id="btn-corrida4">Quem pode participar</button>
+                    </div>
+                    <div>
+                        <div class="card" id="corrida1">
+                            <p>Para o colaborador receber consultoria de orientações, deve procurar o atendimento <a href="https://wa.me/5527999744253" class="wpp-link">Whatsapp do RH</a> e solicitar a entrada no grupo.</p>
+                            <p>Será enviado um formulário de Anamnese para que o plano de treino seja feito de acordo os dados informados, a partir daí o colaborador será um participante do grupo e receberá as orientações.</p>
+                        </div>
+                        <div class="card" id="corrida2">
+                            <p>• O primeiro contato do colaborador com o professor é feito pelo  Whatsapp, por onde será enviado a ficha de Anamnese</p>
+                            <p>• O acompanhamento se dá de forma personalizada, adaptado aos objetivos e condições física de cada participante. Após os primeiros contatos e avaliações, será disponibilizado os planos de treino aos participantes por meio do aplicativo TrainingPeaks</p>
+                        </div>
+                        <div class="card" id="corrida3">
+                            <p>Os treinadores e professores estarão presentes nos pontos de apoio, oferecendo flexibilidade de objetivos, auxiliando no desenvolvimento das atividades propostas e realizando correções quando necessário.</p>
+                        </div>
+                        <div class="card" id="corrida4">
+                            <p>O benefício é oferecido a todos os colaboradores, independente da Região! O acompanhamento é feito de forma virtual.</p>
+                            <p>Não é estendido aos dependentes. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a href="#topo" class="voltar">Voltar ao topo</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-itau">
+            <h1 onclick="toggleContent('descricao-itau')">Itaú</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header-imagem-itau"></div>
+                <div class="conteudo">
+                    <h2 style="font-weight: bolder;">Benefícios <strong style="color:#EE7528;">Banco Itaú</strong></h2>
+                    <div class="conteudo-texto">
+                        <p>O Banco Itaú oferece benefícios aos seus correntistas. Aqui você pode conferir as principais vantagens oferecidas pelo banco. Mas, lembre-se: são benefícios oferecidos pelo próprio Itaú! Por isso, caso você tenha dúvidas, queira saber mais ou utilizar os serviços, entre em contato com o banco através dos canais oficiais. A Fortlev não tem gestão direta sobre nenhum dos benefícios oferecidos pelo Itaú.</p>
+                        <p>Vamos conferir então essas vantagens? Clique <a class="info-itau" href="javascript:void(0);" onclick="toggleDescBene('bene-itau-desc')">aqui</a></p>
+
+                    </div>
+                    <div class="desc-bene-itau" id="bene-itau-desc">
+                        
+                        <div class="bene-itau bene-iphone">
+                            <div class="bene-header">
+                                <img class="img-bene-itau" src="imagens/apple.svg" >
+                                <p class="card-title"><strong class="strong">Iphone</strong></p>
+                            </div>
+                            <p>Clique no link e veja como funciona o programa "Iphone para sempre" do Itaú:</p>
+                            <a href="https://www.itau.com.br/cartoes/iphone-pra-sempre/" target="_blank">Iphone</a>
+                        </div>
+                        <div class="bene-itau bene-samsung">
+                            <div class="bene-header">
+                                <img class="img-bene-itau" src="imagens/Samsung-Logo.png" style="width: 80px;">
+                                <p class="card-title"><strong class="strong">Parcelamento 21x Samsung</strong></p>
+                            </div>
+                            <p>O Itaú oferece facilidades pra para parcelamento de produtos Samsung. Clique e confira:</p>
+                            <a href="https://www.itau.com.br/cartoes/samsung-no-itau/" target="_blank">Samsung</a>
+                        </div>
+                        <div class="bene-itau bene-azul">
+                            <div class="bene-header">
+                                <img class="img-bene-itau" src="imagens/azul.svg" style="width: 66px;">
+                                <p class="card-title"><strong class="strong">Parcelamento 21x Azul</strong></p>
+                            </div>
+                            <p>Conheça as vantagens dos clientes Itaú para viagens com a Azul:</p>
+                            <a href="https://tudoazul.voeazul.com.br/web/azul/Itau/blackfriday" target="_blank">Azul</a>
+                        </div>
+                        <div class="bene-itau bene-ferr">
+                            <div class="bene-header">
+                                <img class="img-bene-itau" src="imagens/settings.svg">
+                                <p class="card-title"><strong class="strong">Ferramentas Itaú</strong></p>
+                            </div>
+                            <p class="bene-ferramentas">Conheça mais sobre os produtos e facilidades que o Itaú oferece, além de ajuda com organização financeira: </p>
+                            <a href="https://www.youtube.com/playlist?list=PL34w81iXr8CtkmLrCVM_VGdhf44zEPsMr" target="_blank">Ferramentas itaú</a>
+                        </div>
+                        <div class="bene-itau bene-correntista">
+                            <p class="card-title"><strong class="strong">Vantagens correntistas</strong></p>
+                            <p>Neste link você pode conferir mais vantagens que temos por ser correntista do Itaú: </p>
+                            <a href="https://www.itau.com.br/contas/folha-de-pagamentos/" target="_blank">Vantagens correntistas</a>
+                        </div>  
+                        <div class="bene-itau bene-taxas">
+                            <p class="card-title"><strong class="strong">Insenção de taxas</strong></p>
+                            <p>O funcionário da Fortlev tem isenção de taxas para abrir a conta corrente no banco Itaú. Os pacotes de conta são dados pelo Itaú, de acordo com a faixa salarial e a política do banco e nos garantem a isenção das taxas bancárias.isso mesmo, temos acesso a todos os serviços oferecidos no nosso pacote de conta corrente sem custo nenhum, além da isenção total de anuidade do cartão de crédito. Consulte os serviços disponíveis no banco ou através do aplicativo</p>
+                            
+                        </div>  
+                    </div>
+                    <p>Esses são benefícios oferecidos diretamente pelo Itaú. Mas caso você tenha alguma sugestão a fazer, fique à vontade para entrar em contato com o RH e dividir conosco a sua história. Estaremos prontos pra te ouvir e tentar ajudar como pudermos!</p>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-credito">
+            <h1 onclick="toggleContent('descricao-credito')">Crédito consignado</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headercredit-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Para os empregados que trabalham há mais de 1 ano de empresa, temos em parceria com o Itaú para empréstimo consignado com desconto em folha de pagamento.</p>
+                        <p>Como fazer a solicitação:</p>
+                            <div class="toggle-btns">
+                                <button onclick="toggleCustomContent('credito1', 'btn-credito1')" class="strong-farm" id="btn-credito1">Solicitação</button>  
+                                <button onclick="toggleCustomContent('credito2', 'btn-credito2')" class="strong-farm" id="btn-credito2">Limite</button>  
+                                <button onclick="toggleCustomContent('credito3', 'btn-credito3')" class="strong-farm" id="btn-credito3">Parcelas</button>  
+                                <button onclick="toggleCustomContent('credito4', 'btn-credito4')" class="strong-farm" id="btn-credito4">Valor máximo da parcela</button>  
+                            </div>
+                            <div class="strong-detail">
+                                <div class="card" id="credito1">
+                                    <h5 class="content-title title-box">1ª Etapa</h5>
+                                    <p class="topic">• Entre em contato com o Whatsapp RH e consulte a margem disponível para desconto em folha</p>
+                                    <p class="topic">• O RH vai avaliar o valor máximo do empréstimo e da parcela para desconto em folha disponível</p>
+                                    <h5 class="content-title">2ª Etapa</h5>
+                                    <p>Consulte no Banco Itaú o crédito disponível. Você poderá consultar: </p>
+                                    <p class="topic">• <strong>No app do Itaú: </strong>você pode consultar o crédito que está pré-aprovado e fazer as simulações e consultar as condições disponíveis</p>
+                                    <p class="topic">• <strong>Na internet: </strong> entre no site Itaú e simule as condições do seu empréstimo consignado</p>
+                                    <p class="topic">• <strong>Na agência Itaú: </strong> Vá até uma agência e fale com o seu gerente ou contrate em um dos caixas eletrônicos</p>
+                                    <h5 class="content-title">3ª Etapa</h5>
+                                    <p>Entre em contato no Whatsapp do RH e apresente a simulação feita no Banco. Caso a simulação esteja dentro da margem, o empréstimo consignado será aprovado e estará disponível em até 24 horas. </p>
+                                </div>
+                                <div class="card" id="credito2">
+                                    <p>O valor máximo que o empregado poderá solicitar de empréstimo consignado para desconto em folha de pagamento é de até 03 salários.</p>
+                                </div>
+                                <div class="card" id="credito3">
+                                    <p>A quantidade máxima liberada pelo contrato FORTLEV é de até 36 parcelas.</p>
+                                </div>
+                                <div class="card" id="credito4">
+                                    <p> O limite da parcela mensal considerado é de 30% do salário, após os descontos legais e descontos de benefícios.</p>
+                                    <p>(Salário Base) - (Descontos legais) - (Desconto de benefícios) x  30%  </p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-turismo">
+            <h1 onclick="toggleContent('descricao-turismo')">Turismo</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header3-imagem"></div>
+                <div class="conteudo">
+                    <h2 style="font-weight: bold;">Desconto em <strong>passagens e hospedaria</strong></h2>
+                    <div class="conteudo-texto">
+                        <p>Em parceria com a Cosmos Turismos, a Fortlev oferece descontos exclusivos em passagens aéreas e hospedagem.</p>
+                        <p>Para usufruir do benefício, basta fazer sua inscrição no formulário e solicitar login e senha para acesso ao sistema de cotações.</p>
+                        <p>Você pode acessar o formulário pelo QR Code abaixo ou clicando <a class="click-aq" href="https://forms.office.com/pages/responsepage.aspx?id=FMXntgfM7E2CrMPphNf9Sg3sJN0D8qNOuFUuIxADZCZUOFdNVUgyQ0k5VUtIQTBLQ0hZUzFSNDRJMi4u" target="_blank"><strong>aqui</strong></a></p>
+                        <img src="./imagens/qrcodeturismo.png" alt="QR Code formulário" class="qr-code">
+                        <p>Os benefícios são muitos!</p>
+                        <p class="topic"><i class="fa fa-check"></i> Redução de custos ao utilizar as tarifas negociadas para Fortlev </p>
+                        <p class="topic"><i class="fa fa-check"></i> Atendimento 24 horas por dia durante todo o período da viagem </p>
+                        <p class="topic"><i class="fa fa-check"></i> Apoio de uma equipe especializada em viagens a lazer para a realização de sua viagem pessoal </p>
+                        <p class="topic"><i class="fa fa-check"></i> Inclusão na lista de transmissão exclusiva da Cosmos para recebimento de promoções e divulgação de destinos turísticos (com prévia autorização do colaborador) </p>
+                        <h5 class="content-title">Formas de pagamento:</h5>
+                        <p class="topic">• Cartão de crédito do colaborador com possibilidade de parcelamento</p>
+                        <p class="topic">• A vista via transferência bancária</p>
+                        <div class="info-turismo">
+                            <span class="obs">Importante! </span><br>
+                            <p class="">Antes de concluir a compra o colaborador deverá entrar em contato com a Cosmos Turismos nos endereços abaixo: </p>
+                            <p><i class="fa fa-envelope icone"></i> E-mail: turismo02.joi@cosmos.com.br</p>
+                            <p><i class="fa fa-whatsapp icone"></i>  WhatsApp: (47) 9770-0908</p>
+                            <p><i class="fa fa-phone icone"></i> Telefone: (47) 3433-1959</p>
+                            <p><strong>Consultora responsável pelo atendimento de lazer: </strong>Rosangela Conceição</p>
+                            <span class="obs-span"><strong>Solicitações de cotações realizadas fora do sistema de reservas, serão respondidas em até 48 horas.</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-kitescolar">
+            <h1 onclick="toggleContent('descricao-kitescolar')">Kit Escolar</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header9-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>A Fortlev se preocupa com o seu desenvolvimento e de toda a sua família, por isso, se você tem filhos de 2 a 14 anos terá direito a um kit escolar exclusivo, que é entregue no início de cada ano letivo. Para receber esse benefício, seu filho deve estar cadastrado como seu dependente na Fortlev.</p>
+                        <p><strong>É importante que mantenha o seu cadastro atualizado conosco para receber o benefício!</strong> Para isso basta nos chamar no <a href="https://wa.me/5527999744253" class="wpp-link">Whatsapp</a>.</p>
+                        <p>O kit escolar é entregue como um cartão MASTERCARD, na função crédito, para uso EXCLUSIVO na compra de materiais escolares.</p>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-ppr">
+            <h1 onclick="toggleContent('descricao-ppr')">PPR</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header21-imagem"></div>
+                <div class="conteudo">
+                    <p>O Programa de Participação dos Resultados - PPR da Fortlev, permite que todos os empregados da empresa sejam premiados pelos resultados e metas preestabelecidos alcançados, tendo alcance de até 4x o salário nominal!</p>
+                    <p>Confira abaixo mais detalhes sobre esse importante benefício da nossa empresa.  </p>
+                    <div class="toggle-btns">
+                        <button onclick="toggleCustomContent('ppr1', 'btn-ppr1')" class="strong-farm" id="btn-ppr1">Objetivos do PPR</button>
+                        <button onclick="toggleCustomContent('ppr2', 'btn-ppr2')" class="strong-farm" id="btn-ppr2">Gatilho</button>
+                        <button onclick="toggleCustomContent('ppr3', 'btn-ppr3')" class="strong-farm" id="btn-ppr3">Elegibilidade</button>
+                        <button onclick="toggleCustomContent('ppr4', 'btn-ppr4')" class="strong-farm" id="btn-ppr4">Absenteísmo e ocorrências</button>
+                    </div>
+                    <div class="strong-detail">
+                        <div class="card" id="ppr1">
+                            <p><i class="fa fa-check"></i> Estimular e melhorar o desempenho da Companhia e dos seus colaboradores;</p>
+                            <p><i class="fa fa-check"></i> Propiciar oportunidade de reconhecimento por mérito de equipe;</p>
+                            <p><i class="fa fa-check"></i> Reconhecer e recompensar a performance diferenciada que agrega valor à Companhia;</p>
+                            <p><i class="fa fa-check"></i> Valoriza a segurança do trabalho;</p>
+                            <p><i class="fa fa-check"></i> Aumenta a performance no atingimento de metas;</p>
+                            <p><i class="fa fa-check"></i> Auxilia na melhoria dos processos operacionais e administrativos.</p>
+                        </div>
+                        <div class="card" id="ppr2">
+                            <div class="ppr-sub">
+                                <p>A meta principal para o atingimento do PPR é o EBITDA.</p>
+                                <p class="space"></p>
+                                <p class="topic">• <strong>Gatilho: </strong>é a meta que representa um objetivo da Companhia e seu atingimento é imprescindível para a premiação;</p>
+                                <p class="topic">• <strong>EBITDA: </strong>é uma sigla em inglês Earnings Before Interest, Taxes, Depreciation and Amortization, que quer dizer o lucro antes dos juros, impostos, depreciação e amortização.</p>
+                            </div>
+                            <div class="ppr-sub">
+                                <h5 class="content-title">Bateu EBITDA?</h5>
+                                <p><i class="fa fa-check"></i>SIM: Há pagamento de PPR</p>
+                                <p><strong>X</strong> NÃO: Não há pagamento de PPR</p>
+                            </div>
+                            <div class="ppr-sub">
+                                <h5 class="content-title">Notas do PPR correspondendo ao múltiplo salarial</h5>
+                                <div class="tables">
+                                  <table>
+                                    <tr>
+                                      <th>Nota</th>
+                                      <th>Descrição</th>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Meta mínima</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>Meta máxima</td>
+                                    </tr>
+                                  </table>
+                                  <table>
+                                    <tr>
+                                      <th>Nota</th>
+                                      <th>Descrição</th>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>0,8</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>1,6</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>2,4</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>3,2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>4,0</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                            </div>
+                            <div class="ppr-sub">
+                                <h5 class="content-title">Composição do múltiplo salarial do PPR</h5>
+                                <p>Gestores de Unidade de Negócio: 50% do resultado atrelado ao resultado de suas metas individuais e 50% atrelado ao resultado das metas da Companhia.</p>
+                                <p>Gerentes, Coordenadores, Supervisores: 50% do resultado atrelado ao resultado de suas metas individuais, 25% atrelado aos resultados ponderados das metas da sua unidade e 25% atrelado aos resultados da Companhia.</p>
+                                <p>Demais empregados: 50% do resultado atrelado ao resultado de suas metas individuais ou Equipe; 25% atrelado aos resultados ponderados das metas da sua unidade e 25% atrelado aos resultados da Companhia.</p>
+                            </div>
+                            <div class="ppr-sub">
+                                <h5 class="content-title">Apuração do PPR a ser distribuído </h5>
+                                <p>O período de apuração do resultado PPR será de 1º de janeiro a 31 de dezembro.</p>
+                                <p class="space"></p>
+                                <p>O PPR será distribuído aos empregados, segundo o atendimento dos seguintes critérios.</p>
+                                <p class="topic">• Atingimento das metas estipuladas no plano de metas, abrangendo as metas da companhia, as metas por equipe e metas individuais</p>
+                                <p class="topic">• Somente será calculada a distribuição do PPR mediante o atingimento do gatilho, representado pela meta de EBITDA</p>
+                                <p class="topic">• O valor máximo a ser pago aos empregados participantes do programa será de até 4 salários nominais, sem acréscimo de quaisquer outros adicionais e variáveis</p>
+                            </div>
+                            <div class="ppr-sub">
+                              <h5 class="content-title">Divulgação dos Resultados</h5>
+                              <p>O acompanhamento e a divulgação do resultado acumulado das metas ocorrem mensalmente, em quadros específicos, abrangendo os setores das unidades. </p>
+                            </div>
+                            <div class="ppr-sub">
+                              <h5 class="content-title">Apuração final </h5>
+                              <p>A apuração final dos resultados do PPR e a respectiva distribuição dos valores serão feitos até o último dia do mês de fevereiro, do ano subsequente.</p>
+                            </div>
+                        </div>
+                        <div class="card" id="ppr3">
+                          <div class="">
+                            <h5 class="content-title  title-box">São elegíveis ao PPR:</h5>
+                            <p class="topic">• Todos os empregados da Fortlev com contratos de empregado ativos e regidos pela CLT, que tenham trabalho pelo menos 15 dias no período de apuração do exercício.</p>
+                            <p class="topic">• Empregados afastados por licenças legais, que tenham trabalho pelo menos 15 dias no período de apuração do exercício, sendo considerado apenas o período trabalhado antes do afastamento e/ou período trabalhado após o retorno ao trabalho, exceto para os casos de acidente de trabalho e licença-maternidade.</p>
+                            <p class="topic">• Empregados desligados, exceto aqueles cujo desligamento tenha ocorrido por justa causa, que tenham trabalho pelo menos 15 dias no período de apuração do exercício, obedecendo a proporcionalidade do período trabalhado.</p>
+                          </div>
+                          <div class="">
+                            <h5 class="content-title">Não elegíveis ao PPR:</h5>
+                            <p class="topic">• Empregados demitidos por justa causa.</p>
+                            <p class="topic">• Empregados afastados que não tenham trabalhado, pelo menos, 15 dias no período de apuração.</p>
+                            <p class="topic">• Estagiários, trabalhadores temporários e demais que não tenham contrato de empregado, na forma da legislação, com a Fortlev.</p>
+                          </div>
+                        </div>
+                        <div class="card" id="ppr4">
+                          <h5 class="content-title  title-box">Fator de absenteísmo e ocorrências </h5>
+                          <p>Para reconhecer e valorizar os empregados que são pontuais e tem comportamento em conformidade com as normas da Fortlev, será levado em conta o número de faltas injustificadas e advertências como critério para redução do pagamento do PPR.</p>
+                          <p>Número de advertências, faltas e suspensões:</p>
+                          <div>
+                            <table>
+                              <tr>
+                                <th>Número de ocorrências</th>
+                                <th>Percentual PPR</th>
+                              </tr>
+                              <tr>
+                                <td>0</td>
+                                <td>100%</td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>80%</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>60%</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>40%</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>20%</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>0%</td>
+                              </tr>
+                            </table>
+                            <br>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-conveniofarmacia">
+            <h1 onclick="toggleContent('descricao-conveniofarmacia')">Convênio farmácia</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header6-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>A Fortlev firmou parceria com a Drogasil e Drogaria Raia, com abrangência em todo o território nacional, para oferecer descontos exclusivos de até 40% em medicamentos.</p>
+                        <p>Clique nos botões abaixo para ver os critérios</p>
+                        <div class="toggle-btns toggle-farmacia">
+                            <button onclick="toggleCustomContent('farmacia1', 'btn-farmacia1')" class="strong-farm" id="btn-farmacia1">Elegibilidade</button>
+                            <button onclick="toggleCustomContent('farmacia2', 'btn-farmacia2')" class="strong-farm" id="btn-farmacia2">Descontos</button>
+                            <button onclick="toggleCustomContent('farmacia3', 'btn-farmacia3')" class="strong-farm" id="btn-farmacia3">Forma de pagamento</button>                        
+                            <button onclick="toggleCustomContent('farmacia4', 'btn-farmacia4')" class="strong-farm" id="btn-farmacia4">Renovação de limite</button>                        
+                            <button onclick="toggleCustomContent('farmacia5', 'btn-farmacia5')" class="strong-farm" id="btn-farmacia5">Adesão</button>                        
+                            <button onclick="toggleCustomContent('farmacia6', 'btn-farmacia6')" class="strong-farm" id="btn-farmacia6">Dependentes</button>                        
+                        </div>
+                        <div class="strong-detail">
+                            <div class="card" id="farmacia1">
+                                <p>Este benefício abrange a todos os diretores, empregados e estagiários.</p>
+                            </div>                            
+                            <div class="card" id="farmacia2">
+                                <p>Desconto de até 40% em medicamentos.</p>
+                                <p>O desconto não é comutativo com outros oferecidos pela farmácia. No ato da compra cabe ao colaborador avaliar a condição de desconto que mais o beneficia.</p>
+                            </div>                           
+                            <div class="card" id="farmacia3">
+                                <p>O funcionário terá a opção de desconto em folha com limite de 8% do salário base. Essa opção de pagamento não é estendida aos dependentes.</p>
+                                <p>Os funcionários afastados, a partir do segundo mês do afastamento, perdem a possibilidade de pagamento com desconto em folha. Os descontos poderão ser acessados normalmente, escolhendo outro meio de pagamento disponível.</p>
+                                <span class="obs-span">Estagiários tem acesso ao desconto da farmácia, mas não tem a opção de desconto em folha.</span>
+                            </div>
+                            <div class="card" id="farmacia4">
+                                <p>A data corte das compras é todo dia 10 de cada mês. Ou seja, as compras feitas até o dia 10 serão descontadas no mesmo mês, em folha de pagamento.</p>
+                                <p>As compras feitas depois do dia 10, serão descontadas no mês seguinte.</p>
+                                <p>A renovação do limite para desconto em folha é todo o dia 11 de cada mês.</p>
+                            </div>
+                            <div class="card" id="farmacia5">
+                                <p>A adesão é automática! Os novos admitidos têm acesso ao benefício a partir do dia 11 do mês seguinte a sua admissão.</p>
+                            </div>
+                            <div class="card" id="farmacia6">
+                                <p>Para acessos dos dependentes aos descontos, basta informar o CPF e a matrícula do funcionário titular. Dependentes cônjuges e filhos podem fazer uso do desconto, desde que de posse das informações do funcionário.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-planodesaude">
+            <h1 onclick="toggleContent('descricao-planodesaude')">Plano de saúde</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header4-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>A Fortlev considera que a saúde e bem-estar dos funcionários é um bem que precisa ser cuidado. Como uma empresa responsável e alinhada as práticas do mercado, oferece aos seus colaboradores e dependentes plano de saúde. </p>
+                        <div class="toggle-btns toggle-saude">
+                            <button onclick="toggleCustomContent('plano1', 'btn-plano1')" class="strong-farm" id="btn-plano1">Adesão</button>                        
+                            <button onclick="toggleCustomContent('plano2', 'btn-plano2')" class="strong-farm" id="btn-plano2">Cancelamento</button>   
+                            <button onclick="toggleCustomContent('plano3', 'btn-plano3')" class="strong-farm" id="btn-plano3">Dependentes</button>   
+                            <button onclick="toggleCustomContent('plano4', 'btn-plano4')" class="strong-farm" id="btn-plano4">Custo</button>
+                            <button onclick="toggleCustomContent('plano5', 'btn-plano5')" class="strong-farm" id="btn-plano5">Carteirinha</button>                                 
+                            <button onclick="toggleCustomContent('plano6', 'btn-plano6')" class="strong-farm" id="btn-plano6">Troca de Plano</button>                                 
+                        </div>
+                        <div class="strong-detail">
+                            <div class="card" id="plano1">
+                                <p>As opções de plano de saúde são apresentadas na integração e em nosso canal do WhatsApp RH (27) 9 9974 4253. O funcionário recém-contratado tem até 15 dias corridos, a contar da data da admissão, para escolher seu plano.</p>
+                                <p>A adesão ao plano está disponível apenas para os empregados contratados no formato CLT, não sendo aplicável aos estagiários. </p>
+                                <p>Entre em contato pelo <a href="https://wa.me/5527999744253" class="wpp-link">Whatsapp</a>  para solicitar sua adesão.</p>
+                                <p><strong>ATENÇÃO!</strong><br>Caso o colaborador recém-admitido não solicite a inclusão dentro de 15 dias, deverá aguardar a próxima janela de adesão ao plano que é divulgada pelo RH. Essa janela acontece uma vez cada ano. </p>
+                            </div>
+                            <div class="card" id="plano2">
+                                <p>O colaborador que deseja cancelar o seu plano de saúde ou solicitar o cancelamento do seu dependente, deve solicitar pelo <a href="https://wa.me/5527999744253" class="wpp-link">Whatsapp</a> do RH. A exclusão será programada conforme data corte da operadora do Plano de Saúde. </p>
+                            </div>
+                            <div class="card" id="plano3">    
+                                <p>São considerados dependentes:</p>
+                                <p><i class="fa fa-check"></i> Filhos, com certidão de nascimento e CPF</p>
+                                <p><i class="fa fa-check"></i> Cônjuges com certidão de casamento e CPF</p>
+                                <p><i class="fa fa-check"></i> Companheiros com certidão de união estável lavrada em cartório e CPF</p>
+                                <p><i class="fa fa-check"></i> Aqueles que tenham guarda concedida por sentença judicial, podem ser incluídos como dependentes.</p>
+                                <p><i class="fa fa-check"></i> No caso dos filhos e equiparados, a permanência no plano como dependente poderá se estender até a idade limite determinada por cada operadora</p>
+                                <p><i class="fa fa-check"></i>Todos os dependentes permanecem no mesmo padrão de plano e operadora escolhidos pelo colaborador</p>
+                                <p><i class="fa fa-check"></i>Inclusão de filho maior de 21 anos, somente se for estudante de ensino técnico ou graduação</p>
+                                <p>A adesão dos dependentes segue a mesma regra do titular. Para os filhos recém-nascidos e recém-casados, a adesão deve ser solicitada em 15 dias contados da data do nascimento ou casamento. </p>
+                            </div>
+                            <div class="card" id="plano4">
+                                <p>O valor a ser pago vai depender da opção de plano escolhida pelo empregado, conforme opções disponíveis.</p>
+                                <p class="topic">• <strong>Custeio Titular e Dependentes: </strong> A Fortlev custeia 70% da mensalidade do plano de saúde básico, para o colaborador e seus dependentes. Assim, o colaborador custeia 30% do valor da mensalidade + o custo total da coparticipação, conforme o plano disponível.</p>
+                                <p class="topic">• <strong>Custeio para filhos acima de 21 anos: </strong>Quando o filho completar 21 anos, poderá continuar no plano na condição de dependente até a idade limite determinada pela operadora de saúde, porém, o custo deste dependente não será subsidiado pela empresa, ficando totalmente a cargo do colaborador.</p>
+                                <p class="topic">• <strong>Para os filhos maior de 21 anos que são estudante de escola universitária e escola técnica: </strong>A manutenção do custeio pela empresa para os filhos dependentes maiores de 21 anos passa a existir caso o filho seja estudante universitário ou estudante de escola técnica. Para isso, o colaborador deve procurar o RH pelo número (27) 9 9974-4253 e apresentar semestralmente a comprovação da matrícula escolar.</p>
+                                <p>Caso o filho não seja estudante e o colaborador não esteja de acordo com o desconto integral da mensalidade do plano, deverá pedir a exclusão do dependente antes de completar 21 anos, pelo Whatsapp RH  (27) 99974-4253.</p>
+                                <p class="topic">• <strong>Para filhos maiores de 24 anos: </strong>A condição de filho estudante é válida até completar 24 anos. Ao complementar 24 anos o desconto da mensalidade do plano de saúde passa a ser integralmente assumido pelo colaborador.</p>                                
+                            </div>
+                            <div class="card" id="plano5">
+                                <p >• <strong>Unimed: </strong> A carteirinha da Unimed é Virtual. Para acessar a carteirinha, é só baixar o App <strong>Unimed Nacional</strong> e fazer o seu cadastro</p>
+                                <p class="topic">• <strong>Samp: </strong> A carteirinha pode ser usada de forma física ou virtual. Para acessar a carteirinha virtual, baixe o App <strong>SAMP</strong>, escolha a opção cadastro e complete com os seus dados.</p>
+                                <p class="topic">• <strong>Intermédica: </strong> A carteirinha da Intermédica é física e será entregue pelo RH.</p>
+                                <p class="topic">• <strong>Nordeste Saúde: </strong> A carteirinha da Nordeste Saúde é física e será entregue pelo RH.</p>
+                            </div>  
+                            <div class="card" id="plano6">
+                                <h5 class="content-title title-box"> Upgrade ou Downgrade</h5>
+                                <p>Os colaboradores têm a opção de troca de acomodação do plano uma vez por ano. O período de troca é divulgado pelo RH pelos canais de comunicação.</p>
+                                <span class="obs-span">Não é permitido troca de plano fora desse período.</span>
+                            </div>  
+                        </div>                           
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+        </section>
+    
+        <section class="descricao-beneficio" id="descricao-odonto">
+            <h1 onclick="toggleContent('descricao-odonto')">Plano odontológico</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header5-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <h2 style="font-weight: bolder;">Plano <strong>Amil Dental</strong></h2>
+                        <p>O plano oferecido pela Fortlev é o Amil Dental e possui cobertura nacional. Os nossos colaboradores podem contar com 6 tipos de plano, desde o básico até o mais completo.</p>
+                        <div class="toggle-btns">
+                            <button onclick="toggleCustomContent('strong15', 'btn-strong15')" class="strong-farm" id="btn-strong15">Adesão</button>    
+                            <button onclick="toggleCustomContent('strong16', 'btn-strong16')" class="strong-farm" id="btn-strong16">Dependentes</button>  
+                            <button onclick="toggleCustomContent('strong17', 'btn-strong17')" class="strong-farm" id="btn-strong17">Custo</button> 
+                            <button onclick="toggleCustomContent('strong18', 'btn-strong18')" class="strong-farm" id="btn-strong18">Carterinha</button> 
+                        </div>
+                        <div class="strong-detail">
+                            <div class="card" id="strong15">
+                                <p>As opções são apresentadas na integração, aqui no mundo azul e em nosso canal do Whatsapp RH (27) 9 9974 4253. O novo colaborador tem até 15 dias corridos, a contar da data da admissão, para escolher seu plano e entrar em contato com o RH pelo Whatsapp para solicitar sua adesão.</p>
+                                <h5>Atenção!</h5>
+                                <p>Caso o colaborador recém-admitido não solicite a inclusão dentro de 15 dias, deverá aguardar a próxima janela de adesão ao plano que é divulgada pelo RH. Essa janela acontece uma vez por ano.</p>
+                            </div>
+                            <div class="card" id="strong16">
+                                <p>São considerados dependentes do plano:</p>
+                                <p><i class="fa fa-check"></i> <strong>Filhos</strong> com certidão de nascimento e CPF.</p>
+                                <p><i class="fa fa-check"></i> <strong>Cônjuges</strong> com certidão de casamento e CPF.</p>
+                                <p><i class="fa fa-check"></i> <strong>Companheiros</strong> que tenham união estável reconhecida em certidão ou sentença judicial.</p>
+                                <p><i class="fa fa-check"></i> Aqueles que tenham <strong> guarda concedida por sentença judicial</strong> podem ser incluídos como dependentes. </p>
+                                <div class="info-saude">
+                                    <span >*No caso dos filhos e equiparados, a permanência no plano como dependente poderá se estender até a idade limite determinada por cada operadora.</span><br>
+                                    <span >*A adesão dos dependentes segue a mesma regra do titular. Para os filhos recém-nascidos e recém-casados, a adesão deve ser solicitada em 15 dias contados da data do nascimento ou casamento.</span><br>
+                                    <span><strong>Atenção!</strong></span><br>
+                                    <span>Inclusão de filho maior de 21 anos, somente se for estudante de ensino técnico ou graduação.</span>
+                                </div>
+                            </div>
+                            <div class="card" id="strong17">
+                                <p>O valor é custeado integralmente pelo colaborador.</p>
+                            </div>    
+                            <div class="card" id="strong18">
+                                <p>Para este plano não há carteirinha física, somente virtual. Para acessar sua carteirinha é só baixar o aplicativo Amil Dental, informando sua data de nascimento, e-mail e CPF.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="infosadicionais"><strong>Tipos de plano</strong></p>
+                        <p>Em todos os planos estão inclusos os seguintes benefícios:</p>
+                        <p><i class="fa fa-check"></i> Urgência - 24 horas;</p>
+                        <p><i class="fa fa-check"></i> Consultas (inclusive aos sábados);</p>
+                        <p><i class="fa fa-check"></i> Limpeza, profilaxia e aplicação de flúor;</p>
+                        <p><i class="fa fa-check"></i> Radiografia panorâmica e periapical;</p>
+                        <p><i class="fa fa-check"></i> Tratamento de gengiva;</p>
+                        <p><i class="fa fa-check"></i> Tratamento para crianças;</p>
+                        <p><i class="fa fa-check"></i> Tratamento de canal;</p>
+                        <p><i class="fa fa-check"></i> Restaurações - obturações (de resina ou amálgama);</p>
+                        <p><i class="fa fa-check"></i> Cirurgias - extrações (incluindo o dente do siso);</p>
+                        <p><i class="fa fa-check"></i> Próteses unitárias - provisórias e definitivas, conforme RN 211 da ANS.</p>
+                        <div class="toggle-btns">
+                            <button onclick="toggleCustomContent('odonto1', 'btn-odonto1')" class="strong-farm btn-content" id="btn-odonto1">Plano Amil 200</button>    
+                            <button onclick="toggleCustomContent('odonto2', 'btn-odonto2')" class="strong-farm btn-content" id="btn-odonto2">Plano Amil 300</button>  
+                            <button onclick="toggleCustomContent('odonto3', 'btn-odonto3')" class="strong-farm btn-content" id="btn-odonto3">Plano Amil 400</button> 
+                            <button onclick="toggleCustomContent('odonto4', 'btn-odonto4')" class="strong-farm btn-content" id="btn-odonto4">Plano Amil 500</button> 
+                            <button onclick="toggleCustomContent('odonto5', 'btn-odonto5')" class="strong-farm btn-content" id="btn-odonto5">Plano Amil 600</button> 
+                            <button onclick="toggleCustomContent('odonto6', 'btn-odonto6')" class="strong-farm btn-content" id="btn-odonto6">Plano Amil 700</button> 
+                        </div>
+                    </div>
+                    <div class="strong-detail">
+                        <div class="card" id="odonto1">
+                            <h5 class="content-title title-plans title-box title-box">Plano Amil 200 - R$ 13,54 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> Clareamento de dente desvitalizado;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Mantenedores de espaço fixo e móvel;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Radiografias de ATM;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Fechamento de diastemas com resina composta;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Dessensibilização dentária;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Enxertos gengivais e ósseos (somente ato cirúrgico);</p>
+                            <p class="topic"><i class="fa fa-check"></i> Cirurgia com finalidade de tracionamento dentário;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Documentação periodontal básica e em mídia digital;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Consulta para instalação de aparelho ortodôntico metálico convencional</p>
+                        </div>
+                        <div class="card" id="odonto2">
+                            <h5 class="content-title title-plans title-box">Plano Amil 300 - R$ 60,31 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Cobertura integral Dental 200 R + Ortodontia completa:</strong></p>
+                            <p class="topic"><i class="fa fa-check"></i> Documentação ortodôntica;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Instalação de aparelhos: fixo metálico convencional, móvel e ortopédico;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Manutenção mensal.</p>
+                        </div>
+                        <div class="card" id="odonto3">
+                            <h5 class="content-title title-plans title-box">Plano Amil 400 - R$ 51,23 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Cobertura integral Dental 200 R + Próteses em resina*:</strong></p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese total;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese parcial removível;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese fixa unitária ou parcial.</p>
+                            <span class="obs-span">*Exceto próteses sobre implante</span>
+                        </div>
+                        <div class="card" id="odonto4">
+                            <h5 class="content-title title-plans title-box">Plano Amil 500 - R$ 57,35 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Cobertura integral Dental 200 R + Próteses em resina e porcelana*:</strong></p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese total;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese parcial removível;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Prótese fixa unitária ou parcial.</p>
+                            <span class="obs-span">*Exceto próteses sobre implante</span>
+                        </div>
+                        <div class="card" id="odonto5">
+                            <h5 class="content-title title-plans title-box">Plano Amil 600 - R$ 71,52 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Cobertura integral Dental 200 R + Ortodontia completa:</strong></p>
+                            <p class="topic"><i class="fa fa-check"></i> Documentação ortodôntica;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Manutenção mensal.</p>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Próteses em resina*:</strong></p>
+                            <p class="topic">• Prótese total;</p>
+                            <p class="topic">• Prótese parcial removível;</p>
+                            <p class="topic">• Prótese fixa unitária ou parcial.</p>
+                            <span class="obs-span">*Exceto próteses sobre implante</span>
+                        </div>
+                        <div class="card" id="odonto6">
+                            <h5 class="content-title title-plans title-box">Plano Amil 700 - R$ 78,69 por pessoa</h5>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Cobertura integral Dental 200 R + Ortodontia completa:</strong></p>
+                            <p class="topic"><i class="fa fa-check"></i> Documentação ortodôntica completa;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Instalação de aparelhos fixo metálico convencional, móvel metálico convencional e ortopédico metálico convencional;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Manutenção mensal;</p>
+                            <p class="topic"><i class="fa fa-check"></i> Clareamento convencional (gel e moldeira)</p>
+                            <p class="topic"><i class="fa fa-check"></i> <strong>Próteses em resina e porcelana*:</strong></p>
+                            <p class="topic">• Prótese total;</p>
+                            <p class="topic">• Prótese parcial removível;</p>
+                            <p class="topic">• Prótese fixa unitária ou parcial.</p>
+                            <span class="obs-span">*Exceto próteses sobre implante</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Clique em uma das opções abaixo para baixar o aplicativo:</p>
+                        <div class="app-div">
+                            <a class="app" href="https://apps.apple.com/br/app/amil-clientes/id471890526" target="_blank"><i class="fa fa-apple"></i></a>
+                            <a class="app" href="https://play.google.com/store/apps/details?id=br.com.amil.beneficiarios" target="_blank"><i class="fa fa-android"></i></a>
+                        </div>
+                    </div>
+                    <div class="voltar-div">
+                        <i class="fa fa-arrow-up"></i>
+                        <a class="voltar" href="#topo">Voltar ao topo</a>
+                    </div>  
+                </div> 
+        </section>
+        
+        <section class="descricao-beneficio" id="descricao-segurodevida">
+            <h1 onclick="toggleContent('descricao-segurodevida')">Seguro de vida</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img header7-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>Todos os colaboradores contratados em regime CLT possuem seguro de vida. O colaborador admitido é incluído automaticamente no Seguro de Vida em Grupo, com a seguradora MetLife. O custo do empregado é de 1,00 mensal.</p>
+                        <p>O seguro garante ao colaborador e a família:</p>
+                        <div>
+                            <h5 class="content-title title-plans">Colaborador:</h5>
+                            <p><i class="fa fa-check"></i><strong> Em caso de morte: </strong>15 vezes o salário base;</p>
+                            <p><i class="fa fa-check"></i><strong> Em casos de invalidez permanente total ou parcial por acidente: </strong>Nestes casos o valor a ser pago é avaliado conforme o grau de invalidez, a avaliação é feita pelos médicos da Seguradora;</p>
+                            <p><i class="fa fa-check"></i><strong> Em casos de invalidez permanente total ou parcial por doenças: </strong>Nestes casos o valor a ser pago é avaliado conforme o grau de invalidez, a avaliação é feita pelos médicos da Seguradora.</p>
+                        </div>
+                        <div>
+                            <h5 class="content-title">Colaborador e dependentes legais:</h5>
+                            <p><i class="fa fa-check"></i>Auxílio-funeral no valor de R$ 5.000,00, que também é válido para cônjuge e filhos.</p>
+                        </div>
+                        <div class="info-turismo">
+                            <h5 class="content-title title-box">Atenção!</h5>
+                            <p class="topic">• Todos os seguros estão sujeitos a análise e aprovação da Seguradora;</p>
+                            <p class="topic">• Caso o funcionário queira alterar o formulário de beneficiários indicados para recebimento do Seguro de Vida, deve procurar o nosso canal de atendimento no Whatsapp pelo número (27) 9 9974 4253.</p>
+                        </div>
+
+                        <div class="info">
+                            <span class="obs-span">Para acionar o seguro, entre em contato pelo número <strong>(27) 9 9901-3890</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+
+            </div>
+        </section>
+
+        <section class="descricao-beneficio" id="descricao-cestaBasica">
+            <h1 onclick="toggleContent('descricao-cestaBasica')">Cesta Básica (Somente Fortlev BA e Composto BA)</h1>
+            <div class="descricao-beneficio-conteudo">
+                <div class="header-img headerbasket-imagem"></div>
+                <div class="conteudo">
+                    <div class="conteudo-texto">
+                        <p>O benefício de cesta básica é oferecido para os colaboradores mensalmente. Tem direito o colaborador que não teve faltas no mês, no período de ponto fechado (20 a 21), mesmo que justificadas.</p>
+                        <p>A cesta é entregue no último dia útil de cada mês.</p>
+                    </div>
+                </div>
+                <div class="voltar-div">
+                    <i class="fa fa-arrow-up"></i>
+                    <a class="voltar" href="#topo">Voltar ao topo</a>
+                </div>  
+            </div>
+
+            </div>
+        </section>
+    </section>
+
+    <div class="invisible"></div>
+    <footer>
+        <p id="footer">Fortlev &copy; 2024</p>
+    </footer>
+</body>
+</html>
+
+<style>
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+* {
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.space {
+  height: 3px !important;
+}
+
+main {
+  min-height: 80vh;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 12px;
+  padding: 5px;
+}
+
+table {
+  margin: 10px 0px;
+}
+
+.tables {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wpp-btn {
+  position: fixed;
+  top: 75%;
+  left: 95%;
+  z-index: 999999;
+}
+
+.wpp-text {
+  font-size: 18px !important;
+  vertical-align: baseline;
+}
+
+.wpp-btn button {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wpp-img {
+  width: 50px;
+}
+
+.container {
+  width: 74%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.h-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.obs-span {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.obs-sesc {
+  font-size: 14px !important;
+}
+
+.wpp-link {
+  text-decoration: underline !important;
+}
+
+.topic {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.click-aq {
+  text-decoration: underline !important;
+  color: #00386D;
+  font-weight: 600;
+}
+
+.click-aq:hover {
+  opacity: 0.6;
+}
+
+.content-title {
+  margin: 2rem 0 1rem 0;
+  font-size: 16px;
+}
+
+.title-plans {
+  font-size: 17px;
+}
+
+.invisible {
+  height: 10rem;
+}
+
+h1 {
+  text-align: center;
+  color: #00386D;
+  transition: color 0.5s;
+}
+.titulo{
+  color: #00386D;
+  margin: 2rem auto;
+  font-size: 47px;
+  font-weight: 300;
+}
+
+
+
+body {
+  background-color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px 40px;
+  padding: 20px;
+  justify-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.close {
+  color: #fff;
+}
+
+.conteudo {
+  width: 80%;
+  margin: auto;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 35px 0;
+}
+
+.info-sesi {
+  margin-bottom: 14px;
+}
+
+.ppr-sub {
+  margin-bottom: 20px;
+}
+
+.ppr-sub p {
+  margin: 5px 0 !important;
+  font-size: 12px !important;
+}
+
+.gympass-img {
+  max-width: 1000px !important;
+
+}
+
+.site {
+  display: flex;
+  gap: 1rem;
+}
+
+.voltar-div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px 10px;
+  gap: 5px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+
+.voltar {
+  text-decoration: none;
+  color: #fff;
+}
+
+.conteudo > p {
+  font-size: 21px;
+}
+
+.obs {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.quad {
+  width: 100%;
+  height: 110px;
+  /*background-color: #f5f5f5;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5%;
+  transition: transform 0.5s;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  padding: 10px 13px;
+
+}
+.quad:nth-child(n+2):nth-child(-n+5) {
+  background-color: rgb(0, 56, 109, 0.3);
+}
+
+/* Grupo 6 ao 9 */
+.quad:nth-child(n+6):nth-child(-n+9) {
+    background-color: rgb(36, 120, 182, 0.5);
+}
+
+/* Grupo 10 ao 18 */
+.quad:nth-child(n+10):nth-child(-n+18) {
+    background-color: rgb(71, 179, 231, 0.5);
+}
+
+/* Grupo 19 ao 21 */
+.quad:nth-child(n+19):nth-child(-n+21) {
+    background-color: rgb(255, 214, 24, 0.5);
+}
+
+/* Grupo 22 ao 25 */
+.quad:nth-child(n+22):nth-child(-n+25) {
+    background-color: rgb(238, 117, 40, 0.5);
+}
+
+
+.quad img{
+    width: 50px;
+    height: auto;
+}
+
+
+
+
+.quad:hover{
+  transform: scale(1.1); 
+}
+
+
+
+.beneficio {
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.descricao-beneficio {
+  display: none;
+  animation: fadeIn 1s;
+  min-height: 90vh;
+  padding-bottom: 3rem !important;
+}
+
+.descricao-beneficio h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.icone {
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.fa-envelope {
+  font-size: 11px !important;
+}
+
+.info-turismo {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin: 25px 0;
+}
+
+.title-box {
+  margin: 10px 0px 1rem !important;
+}
+
+.info-itau {
+  color: #00386D;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.info-saude {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+
+.info-saude span {
+  font-size: 12px;
+}
+
+.bene-taxas {
+  grid-column: 2 / span 3;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background-color: #00386D;
+  padding: 3px 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+p#footer {
+  margin: 25px auto;
+}
+
+#footer {
+  color: #FFF !important;
+}
+
+.h-main {
+  text-align: left;
+  background-color: #00386D;
+  height: 4.5rem;
+
+}
+
+.h-main img {
+  max-width: 100%;
+  width: 150px;
+  height: auto;
+}
+
+.header-img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  opacity: 70%;
+  height: 300px;
+  background-color: #fff;
+  background-position-y: center;
+
+}
+
+
+.header-imagem-itau {
+  background-image: url('imagens/itau.jpg');
+
+}
+.header2-imagem {
+  background-image: url('imagens/well.png');
+  
+}
+
+.header3-imagem{
+  background-image: url('imagens/aviao.png');
+
+}
+
+
+.header4-imagem{
+  background-image: url('imagens/planodesaudeheader.jpg');
+  background-position-y: center
+
+}
+
+.header5-imagem{
+  background-image: url('imagens/dentista.jpg');
+
+}
+
+.header6-imagem{
+  background-image: url('imagens/farmacia.png');
+
+}
+
+.header7-imagem{
+  background-image: url('imagens/life.jpg');
+  background-position-y: center;
+
+}
+
+.header9-imagem{
+  background-image: url('imagens/material-escolar.jpg'); 
+}
+
+.header10-imagem{
+  background-image: url('imagens/maos2.JPG');  
+}
+
+.header12-imagem{
+  background-image: url('imagens/cafeteria.jpg');
+  /* background-position-y: -175px;   */
+}
+
+.header13-imagem{
+  background-image: url('imagens/lunch.jpg');
+}
+
+.header14-imagem{
+  background-image: url('imagens/lunch2.jpg');
+}
+
+.header15-imagem{
+  background-image: url('imagens/ticket.png');
+}
+
+.headerkid-imagem{
+  background-image: url('imagens/gift2.jpg'); 
+}
+
+
+.headerbirthday-imagem{
+  background-image: url('imagens/brinde.jpg'); 
+}
+
+.headerchristmas-imagem{
+  background-image: url('imagens/christmas.jpg');   
+}
+
+.header19-imagem{
+  background-image: url('imagens/cultoheader.png'); 
+}
+
+.headersalary-imagem{
+  background-image: url('imagens/money2.jpg'); 
+}
+
+.headersesc-imagem{
+  background-image: url('imagens/pool.jpg'); 
+}
+
+.headersesi-imagem{
+  background-image: url('imagens/sesi.jpg'); 
+}
+
+.headerlxm-imagem{
+  background-image: url('imagens/lxm.png'); 
+}
+
+.headercredit-imagem{
+  background-image: url('imagens/credit2.jpg'); 
+}
+
+.headerbasket-imagem{
+  background-image: url('imagens/mercado.jpg'); 
+}
+
+.headercorrida-imagem{
+  background-image: url('imagens/corrida2.jpg'); 
+}
+
+.header20-imagem{
+  background-image: url('imagens/car.png');  
+}
+
+.header21-imagem{
+  background-image: url('imagens/ppr.jpg');   
+}
+
+.headerbaby-imagem{
+  background-image: url('imagens/babyy.jpg');   
+}
+
+.zap{
+  width: 1.5vw;
+  max-width: 100%;
+}
+
+
+.descricao-beneficio {
+  background-color: #47B3E7; 
+  padding: 1px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.descricao-beneficio img {
+  max-width: 100px; 
+}
+
+.descricao-beneficio h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333; 
+}
+
+.descricao-beneficio a {
+  text-decoration: none;
+}
+
+.descricao-beneficio-conteudo {
+  border: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.unity-detail, .strong-detail {
+  margin: 1rem 0;
+}
+
+.link {
+  padding: 8px 24px;
+  border-radius: 20px;
+  background-color: #00386D;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.link:hover{
+  text-decoration: none;
+  background-color: #EE7528;
+}
+
+.descricao-beneficio a:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff; 
+}
+
+.voltar:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.desc {
+  background-color: #47B3E7; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 3rem;
+  
+}
+
+
+.descricao-beneficio-conteudo.active {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+
+
+.descricao-beneficio-conteudo:not(.active) {
+  background-color: #47B3E7;
+  color: #00386D;
+  margin-top: 0px;
+  
+}
+
+.fa-arrow-up {
+  color: #fff !important;
+}
+
+.conteudo{
+  padding: 20px;
+
+  
+}
+
+.fa-check {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+
+.descricao-beneficio{
+  background-color: #47B3E7;
+  color: #00386D;
+  margin: 0;
+  
+}
+
+.descricao-beneficio h1{
+  font-size: 25px;
+}
+
+
+.descricao-beneficio-conteudo p{
+  font-size: 14px;
+}
+
+
+.desc-bene-itau {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  margin: 10px;
+
+}
+
+.desc-bene-itau.active {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-content: start;
+  background-color: #f5f5f5;
+  flex-direction: row;
+  border-radius: 5px;
+  margin: 10px 0;
+
+}
+
+.bene-itau {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #C5D1DA;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.strong{
+  color: black;
+}
+
+.card-title {
+  text-align: center !important;
+}
+
+.bene-itau a{
+  padding: 4px 24px;
+  border-radius: 20px;
+  background-color: #EE7528;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Calibri", sans-serif;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.4s ;
+  
+}
+
+
+.bene-itau a:hover{
+  color: #00386D;
+  text-decoration: none;
+ 
+}
+
+.bene-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 35%;
+}
+
+
+.img-bene-itau {
+  max-width: 100%;
+  width: 30px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.bene-ferramentas {
+  margin: 0;
+}
+
+.strong-container {
+  display: grid;
+  grid-auto-columns: 1fr; 
+  gap: 10px;
+  margin: 20px 0;
+
+}               
+
+.toggle-btns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.btn-content {
+  background-color: #00386D !important;
+}
+
+
+.card {
+  display: none;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.card-shown {
+  display: block !important;
+  margin-top: 2rem;
+}
+
+.card.active {
+  display: block;
+
+}
+
+.strong-farm{
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 20px;
+  background-color: #2478B6;
+  border: none;
+  color: #fff;
+  transition: background-color 0.5s;
+  font-size: 12px;
+  
+}
+
+.strong-farm:active {
+  background-color: #EE7528 !important;
+}
+
+.strong-farm:hover{
+  background-color: #EE7528;
+  text-decoration: none;
+}
+
+.clicked {
+  background-color: #EE7528 !important;
+}
+
+.site a{
+  padding: 8px 24px;
+  border-radius: 20px;
+  background-color: #00386D;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.site a[href="#topo"]{
+  background-color: #FFD618;
+  padding: 6px 12px;    
+}
+
+.site a[href="#topo"]:hover{
+  color: #47B3E7;
+}
+
+
+
+.site a:hover{
+  color: #C5D1DA;
+  text-decoration: none;
+}
+
+.app{
+  padding: 8px 24px;
+  border-radius: 12px;
+  color: #00386D;
+  font-size: 40px;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #00386D;
+}
+
+.app-div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem 
+}
+
+.app:hover{
+  color: #C5D1DA;
+  text-decoration: none;
+}
+.clique-aqui{
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600px;
+}
+
+.clique-aqui:hover{
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 1210px) {
+  .conteudo {
+    width: 85%;
+  }
+
+}
+
+
+@media (max-width: 1150px) {
+  .strong-farm {
+    font-size: 11px;
+  }
+
+  .descricao-beneficio-conteudo p {
+    font-size: 13px;
+  }
+
+  .voltar {
+    font-size: 13px !important;
+  }
+
+}
+
+
+@media (max-width: 1080px) {
+
+  .toggle-btns {
+    flex-direction: column;
+    gap: 10px;
+    min-width: 100%;
+  }
+
+  .strong-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin-top: 0;
+  }
+
+  .wpp-btn {
+    left: 91%;
+  }
+
+}
+
+@media(max-width: 815px) {
+  .titulo {
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 740px) {
+
+  .bene-samsung, .bene-ferr {
+    grid-column: 2 / span 2;
+  }
+
+  .bene-correntista {
+    grid-column: 1 / span 3;
+  }
+
+  .bene-azul {
+    grid-column: 1 / span 1;
+  }
+
+  .bene-taxas {
+    grid-column: 1 / span 3;
+  }
+
+  .titulo {
+    font-size: 35px;
+  }
+
+  .header12-imagem {
+    background-position-y: center;
+  }
+
+  .site-cardapio {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .wpp-img {
+    width: 43px;
+  }
+  
+  .wpp-btn {
+    left: 90%;
+  }
+
+}
+
+@media(max-width: 600px) {
+  .titulo {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 540px){
+  .descricao-beneficio-conteudo p {
+    font-size: 11px;
+  }
+
+  .voltar {
+    font-size: 12px;
+  }
+
+  .obs {
+    font-size: 11px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .unity-detail p {
+    font-size: 9px !important;
+  }
+
+}
+
+
+@media (max-width: 530px){
+  .bene-itau {
+    grid-column: 1/ span 3;
+    gap: 10px;
+  }
+
+  .bene-ferr {
+    gap: 12px;
+  }
+
+}
+
+@media(max-width: 400px) {
+  .wpp-btn {
+    left: 89%;
+  }
+
+  .wpp-img {
+    width: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
